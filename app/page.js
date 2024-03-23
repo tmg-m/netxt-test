@@ -1,11 +1,9 @@
-import Image from "next/image";
+import Home from "./Pages/Home";
 
-export default function Home() {
+export default function App() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        <p>Hello my Next js app</p>
-      </div>
+    <main>
+      <Home />
     </main>
   );
 }
