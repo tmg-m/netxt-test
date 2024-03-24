@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CtaBtn from "./Button/CtaBtn";
 
 export default function Banner() {
   return (
@@ -10,6 +11,7 @@ export default function Banner() {
           height={200}
         />
       <p>Banner for products</p>
+      <CtaBtn />
     </div>
   );
 }
