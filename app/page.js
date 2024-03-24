@@ -1,9 +1,14 @@
-import Home from "./Pages/Home";
+import Banner from "./Components/Banner";
+import Card from "./Components/Card";
 
-export default function App() {
+export default function Home() {
   return (
-    <main>
-      <Home />
-    </main>
+    <div className="flex flex-col justify-center"> 
+      <div class="mx-5">
+        <p class="mb-8">My Home page</p>
+        <Card/>
+        <Banner/>
+      </div>
+    </div>
   );
 }

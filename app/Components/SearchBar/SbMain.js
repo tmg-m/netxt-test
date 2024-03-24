@@ -8,10 +8,12 @@ export default function SbMain() {
       <div className="flex justify-between">
         
         <a href='https://www.google.com' className="mx-5">Home</a>
+        <a href='https://www.google.com' className="mx-5">All products</a>
         <a href='https://www.google.com' className="mx-5">Phone</a>
-        <a href='https://www.google.com' className="mx-5">Tablets</a>
+        <a href='https://www.google.com' className="mx-5">Tablet</a>
         <a href='https://www.google.com' className="mx-5">TV</a>
         <a href='https://www.google.com' className="mx-5">Accessories</a>
+        <a href='https://www.google.com' className="mx-5">About</a>
       </div>
       <div className="flex justify-between">
         <LocalShippingOutlinedIcon className='mr-8' />
