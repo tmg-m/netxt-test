@@ -1,27 +1,24 @@
-import Image from "next/image"
-import CtaBtn from "./Button/CtaBtn"
-import AddShoppingCartSharpIcon from '@mui/icons-material/AddShoppingCartSharp'
+import Image from "next/image";
+import CtaBtn from "./Button/CtaBtn";
+import ShoppingBasketRoundedIcon from '@mui/icons-material/ShoppingBasketRounded';
 
-export default function Card() {
+export default function Card({ title, description, imageUrl, id }) {
   return (
-    <div className="flex flex-col justify-center mb-8">
-      <div className="relative mb-2">
-        <div className="absolute">
-          <AddShoppingCartSharpIcon  style={{ color: 'white' }} />
-          <p>iphone 15 pro max</p>
-        </div>
+    <div className="relative flex flex-col justify-center items-center mb-8 w-[300px] p-10" style={{ backgroundColor: 'red' }}>
+      <ShoppingBasketRoundedIcon className="absolute top-2 right-2 p-1 text-3xl" style={{ color: 'white' }} />
+      <div className="mb-2 flex items-center justify-center max-w-full w-100 h-[300px]">
         <Image
-          src="https://fastly.picsum.photos/id/443/200/300.jpg?hmac=lXwP6DouUwgwHCQ9ZcgkX6W237U8PAyS9o-YAD1zvN8"
+          className="w-100 h-100"
+          src={imageUrl}
           alt="iphone 15 pro max"
           width={200}
-          height={300}
+          height={200}
         />
       </div>
       <div className="mb-2">
-        <p>aklsdhjfklasdjfklasdjflkaj</p>
-        <p>sdafsdafasdfasdfasdfasdfas</p>
+        <p>{title}</p>
       </div>
-      <CtaBtn />
+      <CtaBtn id={id}/>
     </div>
   );
 }
