@@ -13,8 +13,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SbMain />
-        {children}
+        <div className="border-b fixed w-full backdrop-blur-md z-50" >
+          <SbMain/>
+        </div>
+        <div className="py-20">
+          {children}
+        </div>
         </body>
     </html>
   );

@@ -3,7 +3,7 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
 export default function SbMain() {
   return (
-    <div className="flex justify-between items-center mx-5 mb-8 py-5">
+    <div className="flex justify-between items-center mx-5 py-5">
       <a href='/' className="">Logo</a>
       <div className="flex justify-between">
         
