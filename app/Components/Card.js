@@ -1,24 +1,24 @@
 import Image from "next/image";
-import CtaBtn from "./Button/CtaBtn";
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 
 export default function Card({ title, description, imageUrl, id }) {
   return (
-    <div className="shadow-2xl relative flex flex-col justify-center items-center mb-8 w-[300px] p-10 rounded-xl">
-      <ShoppingBagOutlinedIcon className="absolute top-2 right-2 p-1 text-3xl"/>
-      <div className="mb-2 flex items-center justify-center max-w-full w-100 h-[300px] rounded-md overflow-hidden">
+    <div className="flex relative flex-col shadow-2xl rounded-xl mb-10 min-w-[350px]">
+      <div className="absolute top-4 right-4 rounded-full border p-2 flex items-center justify-center shadow-lg">
+        <ShoppingBagOutlinedIcon className="text-20" />
+      </div>
+      <div className="flex flex-col justify-center items-center overflow-hidden w-100 h-[400px] p-10">
         <Image
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
           src={imageUrl}
           alt="iphone 15 pro max"
-          height={100}
-          width={100}
+          height={1000}
+          width={1000}
         />
       </div>
-      <div className="mb-2">
+      <div className="flex justify-center items-center py-5 w-full border-t">
         <p>{title}</p>
       </div>
-      <CtaBtn id={id}/>
     </div>
   );
 }
