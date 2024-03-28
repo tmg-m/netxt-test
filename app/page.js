@@ -1,7 +1,7 @@
-import Banner from "./Components/Banner";
 import Card from "./Components/Card";
 import Image from "next/image";
 import HeroBanner from "./Components/Hero/HeroBanner";
+import GalleryCycle from "./Components/Gallery/GalleryCycle";
 
 export default function Home() {
   return (
@@ -34,8 +34,9 @@ export default function Home() {
             description={"This is iphone 15 pro max with amazing camera."}
           />
         </div>
+        <GalleryCycle />
         {/* <Banner/> */}
-        <div className="bg-ribbon pl-60 pb-20">
+        <div className="bg-ribbon pl-60 pt-20 pb-20">
           <div className="bg-white py-20 flex flex-col justify-center items-center">
             <Image
               src="/ipad1.jpg"
@@ -56,14 +57,14 @@ export default function Home() {
         <div className="flex justify-center gap-10 pb-20 bg-ribbon">
           <Image
             src="/airpodpro1.png"
-            className="object-fill bg-white rounded-3xl shadow-2xl"
+            className="object-contain bg-white rounded-3xl shadow-2xl w-[500px] h-[500px]"
             alt="airpodpro1"
             height={400}
             width={400}
           />
           <Image
             src="/samsungairbuds.png"
-            className="object-fill bg-white rounded-3xl shadow-2xl"
+            className="object-contain bg-white rounded-3xl shadow-2xl w-[500px] h-[500px]"
             alt="samsungairbuds"
             height={400}
             width={400}
