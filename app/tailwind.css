@@ -33,4 +33,15 @@ body {
   .bg-ribbon {
     background-color: rgb(245, 245, 247);
   }
+  .logos-slides {
+    animation: 20s slides infinite linear;
+  }
+  @keyframes slides {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-242%);
+    }
+  }
 }
