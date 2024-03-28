@@ -1,19 +1,13 @@
 import Banner from "./Components/Banner";
 import Card from "./Components/Card";
 import Image from "next/image";
+import HeroBanner from "./Components/Hero/HeroBanner";
 
 export default function Home() {
   return (
     <div className="pt-10">
       <div class="flex flex-col w-full">
-        <div className="flex justify-center items-center py-10 md:pb-20 w-100">
-          <Image
-            src="/heroImg.jpg"
-            alt="iphone 15 pro max"
-            height={1000}
-            width={1000}
-          />
-        </div>
+        <HeroBanner/>
         <div className="flex gap-10 justify-center items-center w-full bg-ribbon py-20">
           <Card
             id={1}
