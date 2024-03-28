@@ -14,13 +14,13 @@ export default function GalleryCycle() {
     "https://fastly.picsum.photos/id/656/800/500.jpg?hmac=VsO7TVUR4hlp5-gvjA0yPvDIbVJl4RdRWhhYyj8vGuY"
   ];
 
-  const allImages = ImagesURL.concat(ImagesURL); // Duplicate the images
+  const allImages = ImagesURL.concat(ImagesURL)
 
   return (
-    <div className="overflow-hidden whitespace-nowrap bg-ribbon">
-      <div className="flex logos-slides">
+    <div className="overflow-hidden whitespace-nowrap bg-ribbon h-[200px] md:h-full mb-10">
+      <div className="flex logos-slides p-10 md:p-0 h-[200px] md:h-full">
         {allImages.map((url, index) => (
-          <Image className="mr-5" key={index} src={url} alt={`Image ${index + 1}`} width={400} height={400} />
+          <Image className="mr-5 gallery-img" key={index} src={url} alt={`Image ${index + 1}`} width={400} height={400} />
         ))}
       </div>
     </div>
