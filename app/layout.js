@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <div className="border-b fixed w-full backdrop-blur-md z-50" >
           <SbMain/>
         </div>
-        <div className="py-20">
+        <div className="pt-20">
           {children}
         </div>
         </body>

@@ -34,7 +34,7 @@ body {
     background-color: rgb(245, 245, 247);
   }
   .logos-slides {
-    animation: 20s slides infinite linear;
+    animation: slides 30s infinite linear;
   }
   @keyframes slides {
     from {
@@ -44,4 +44,5 @@ body {
       transform: translateX(-242%);
     }
   }
+  
 }
