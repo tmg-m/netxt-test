@@ -3,7 +3,7 @@ import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 
 export default function Card({ title, description, imageUrl, id }) {
   return (
-    <div className="flex relative flex-col shadow-2xl rounded-xl min-w-[350px] bg-white">
+    <div className="flex relative flex-col shadow-2xl rounded-xl min-w-[250px] bg-white">
       <div className="absolute top-4 right-4 rounded-full border p-2 flex items-center justify-center shadow-lg">
         <ShoppingBagOutlinedIcon className="text-20" />
       </div>
