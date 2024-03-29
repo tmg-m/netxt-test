@@ -12,10 +12,10 @@ export default function Home() {
   }));
   return (
     <div className="">
-      <div class="flex flex-col w-full">
+      <div className="flex flex-col w-full">
         <HeroSlider />
 
-        <div className="flex gap-10 justify-start px-5 md:justify-center items-center w-full overflow-scroll bg-ribbon py-10 md:py-20">
+        <div className="flex gap-10 justify-start px-5 md:justify-center items-center w-full overflow-scroll md:overflow-hidden bg-ribbon py-10 md:py-20">
           {cardsData.map((card) => (
             <Card
               key={card.id}
@@ -29,13 +29,16 @@ export default function Home() {
         {/* <Banner/> */}
         <div className="bg-ribbon md:pl-60 pb-20">
           <div className="bg-white py-10 md:py-20 flex flex-col justify-center items-center">
-            <Image
-              src="/ipad1.jpg"
-              className="h-auto mb-20"
-              alt="ipad1"
-              height={2000}
-              width={2000}
-            />
+            <div className="flex items-center justify-center relative">
+              <span className="pulse md:pulse-md pulse-sm absolute"></span>
+              <Image
+                src="/ipad1.jpg"
+                className="h-auto mb-20"
+                alt="ipad1"
+                height={2000}
+                width={2000}
+              />
+            </div>
             <Image
               src="/ipadsm1.jpg"
               className="w-[50%] md:w-[40%] md:h-auto"

@@ -44,5 +44,53 @@ body {
       transform: translateX(-242%);
     }
   }
+  .pulse {
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    animation: pulse-animation 2s infinite;
+  }
+  .pulse-md {
+    left: 42%;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+  }
+  
+  @keyframes pulse-animation {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7)
+    }
+    70% {
+      transform: scale(1.5);
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+  .pulse-sm {
+    left: 42%;
+    top: 35%;
+    width: 15px;
+    height: 15px;
+  }
+
+  @keyframes pulse-animation-sm {
+    0% {
+      transform: scale(2);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7)
+    }
+    50% {
+      transform: scale(2.5);
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+    100% {
+      transform: scale(2);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
   
 }
