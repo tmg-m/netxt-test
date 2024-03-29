@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./tailwind.css";
-import SbMain from "./Components/SearchBar/SbMain";
+import MainNav from "./Components/NavBar/MainNav"
+import MainNavResponsive from "./Components/NavBar/MainNavResponsive"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className="border-b fixed w-full backdrop-blur-md z-50" >
-          <SbMain/>
+          <MainNav />
+          <MainNavResponsive/>
         </div>
         <div className="pt-20">
           {children}

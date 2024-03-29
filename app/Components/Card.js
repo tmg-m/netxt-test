@@ -5,7 +5,7 @@ export default function Card({ title, description, imageUrl, id }) {
   return (
     <div className="flex relative flex-col shadow-2xl rounded-xl min-w-[250px] bg-white">
       <div className="absolute top-4 right-4 rounded-full border p-2 flex items-center justify-center shadow-lg">
-        <ShoppingBagOutlinedIcon className="text-20" />
+        <ShoppingBagOutlinedIcon className="text-gray-500" />
       </div>
       <div className="flex flex-col justify-center items-center overflow-hidden p-10">
         <Image
