@@ -1,5 +1,4 @@
 "use client"
-
 import React, { useState, useEffect } from 'react';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
@@ -10,14 +9,12 @@ export default function MainNav() {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    const updateIsMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    };
+    const updateIsMobile = () => setIsMobile(window.innerWidth < 768);
+  
     updateIsMobile();
-    window.addEventListener('resize', updateIsMobile)
-    return () => {
-      window.removeEventListener('resize', updateIsMobile)
-    };
+    window.addEventListener('resize', updateIsMobile);
+
+    return () => window.removeEventListener('resize', updateIsMobile);
   }, []);
 
   console.log(isMobile)
