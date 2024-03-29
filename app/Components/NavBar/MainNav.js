@@ -5,8 +5,7 @@ export default function SbMain() {
   return (
     <div className="flex justify-between items-center mx-5 py-5">
       <a href='/' className="">Logo</a>
-      <div className="flex justify-between">
-        
+      <div className="flex justify-between items-center">
         <a href='/' className="mx-5">Home</a>
         <a href='/products' className="mx-5">All products</a>
         <a href='/products/phone' className="mx-5">Phone</a>
@@ -15,7 +14,7 @@ export default function SbMain() {
         <a href='/products/accessories' className="mx-5">Accessories</a>
         <a href='/about' className="mx-5">About</a>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between text-gray-500">
         <LocalShippingOutlinedIcon className='mr-8' />
         <ShoppingBagOutlinedIcon className='mr-8' />
         <AccountCircleOutlinedIcon className='' />
