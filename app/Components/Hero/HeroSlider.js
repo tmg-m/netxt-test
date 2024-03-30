@@ -35,15 +35,16 @@ export default function HeroSlider({ id }) {
           />
         ))}
       </div>
-      <div className="flex justify-center items-center gap-5 md:mt-10">
+      <div className="flex justify-center items-center gap-2 md:mt-10">
         {slides.map((slide, index) => (
+          <div key={index} className="w-8 h-8 flex justify-center items-center cursor-pointer" onClick={() => handleSlideClick(index)}>
           <span
-            key={index}
             className={`bg-stone-400 rounded-lg ${
               index === currentSlideIndex ? "bg-stone-600 p-1.5" : "p-1"
             }`}
-            onClick={() => handleSlideClick(index)}
-          ></span>
+          />
+        </div>
+        
         ))}
       </div>
     </div>

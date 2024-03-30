@@ -15,7 +15,7 @@ export default function Home() {
       <div className="flex flex-col w-full">
         <HeroSlider />
 
-        <div className="flex gap-10 justify-start px-5 md:justify-center items-center w-full overflow-scroll md:overflow-hidden bg-ribbon py-5 md:py-20">
+        <div className="flex gap-10 justify-start px-5 md:justify-center items-center w-full overflow-scroll md:overflow-hidden bg-ribbon py-10 md:py-20">
           {cardsData.map((card) => (
             <Card
               key={card.id}
@@ -26,7 +26,6 @@ export default function Home() {
           ))}
         </div>
 
-        {/* <Banner/> */}
         <div className="bg-ribbon md:pl-60 md:pb-20">
           <div className="bg-white py-10 md:py-20 flex flex-col justify-center items-center">
             <div className="flex items-center justify-center relative">
@@ -48,7 +47,9 @@ export default function Home() {
             />
           </div>
         </div>
+
         <GalleryCycle />
+
         <div className="flex justify-center items-center pb-10 md:py-20 bg-ribbon">
           <div className="grid grid-cols-2 gap-10 px-5 md:w-[40%]">
             <div className="flex justify-center items-center">
@@ -71,18 +72,18 @@ export default function Home() {
             </div>
             <div className="flex justify-center items-center">
               <Image
-                src="/airpodpro1.png"
+                src="/samsungTablet.png"
                 className="object-contain bg-white rounded-3xl shadow-2xl w-full h-full"
-                alt="airpodpro1"
+                alt="samsungTablet"
                 height={400}
                 width={400}
               />
             </div>
             <div className="flex justify-center items-center">
               <Image
-                src="/samsungairbuds.png"
+                src="/samsungPhone1.png"
                 className="object-contain bg-white rounded-3xl shadow-2xl w-full h-full"
-                alt="samsungairbuds"
+                alt="samsungPhone1"
                 height={400}
                 width={400}
               />
