@@ -20,7 +20,7 @@ export default function HeroSlider({ id }) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center py-5 md:py-10 md:pb-10 w-100">
+    <div className="flex flex-col justify-center items-center pb-3 md:pt-10 md:pb-5 w-100">
       <div className="h-[300px] md:h-[550px] w-full relative overflow-hidden">
         {slides.map((slide, index) => (
           <Image
@@ -35,7 +35,7 @@ export default function HeroSlider({ id }) {
           />
         ))}
       </div>
-      <div className="flex justify-center items-center gap-2 md:mt-10">
+      <div className="flex justify-center items-center gap-2 md:mt-5">
         {slides.map((slide, index) => (
           <div key={index} className="w-8 h-8 flex justify-center items-center cursor-pointer" onClick={() => handleSlideClick(index)}>
           <span
