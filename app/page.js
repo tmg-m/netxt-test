@@ -1,6 +1,6 @@
 import Card from "./Components/Card";
 import Image from "next/image";
-import GalleryCycle from "./Components/Gallery/GalleryCycle";
+import GallerySlides from "./Components/Gallery/GallerySlides";
 import HeroSlider from "./Components/Hero/HeroSlider";
 
 export default function Home() {
@@ -10,6 +10,14 @@ export default function Home() {
     title: "iphone 15 pro max",
     description: "This is iphone 15 pro max with amazing camera.",
   }));
+
+  const images = [
+    "/airpodpro1.png",
+    "/samsungairbuds.png",
+    "/samsungTablet.png",
+    "/samsungPhone1.png",
+  ];
+
   return (
     <div className="">
       <div className="flex flex-col w-full">
@@ -48,46 +56,21 @@ export default function Home() {
           </div>
         </div>
 
-        <GalleryCycle />
+        <GallerySlides />
 
         <div className="flex justify-center items-center pb-10 md:py-20 bg-ribbon">
           <div className="grid grid-cols-2 gap-10 px-5 md:w-[40%]">
-            <div className="flex justify-center items-center">
-              <Image
-                src="/airpodpro1.png"
-                className="object-contain bg-white rounded-3xl shadow-2xl w-full h-full"
-                alt="airpodpro1"
-                height={400}
-                width={400}
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <Image
-                src="/samsungairbuds.png"
-                className="object-contain bg-white rounded-3xl shadow-2xl w-full h-full"
-                alt="samsungairbuds"
-                height={400}
-                width={400}
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <Image
-                src="/samsungTablet.png"
-                className="object-contain bg-white rounded-3xl shadow-2xl w-full h-full"
-                alt="samsungTablet"
-                height={400}
-                width={400}
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <Image
-                src="/samsungPhone1.png"
-                className="object-contain bg-white rounded-3xl shadow-2xl w-full h-full"
-                alt="samsungPhone1"
-                height={400}
-                width={400}
-              />
-            </div>
+            {images.map((src, index) => (
+              <div key={index} className="flex justify-center items-center">
+                <Image
+                  src={src}
+                  className="object-contain bg-white rounded-3xl shadow-2xl w-full h-full"
+                  alt={`image-${index}`}
+                  height={400}
+                  width={400}
+                />
+              </div>
+            ))}
           </div>
         </div>
 

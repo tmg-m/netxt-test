@@ -16,8 +16,6 @@ export default function MainNav() {
 
     return () => window.removeEventListener('resize', updateIsMobile);
   }, []);
-
-  console.log(isMobile)
   return (
     <>
       {isMobile ? 
