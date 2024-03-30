@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function GalleryCycle() {
+export default function GallerySlides() {
   const ImagesURL = [
     "https://fastly.picsum.photos/id/121/800/500.jpg?hmac=gLwxO0vi9Z0866UIQuisCQ2hU_EcFDOwDPcHaraYzgs",
     "https://fastly.picsum.photos/id/197/800/500.jpg?hmac=_1FsJF7nVOh_947d0rS9fXa-_cMGn7WyK0D2GRlv9Mo",
@@ -20,7 +20,7 @@ export default function GalleryCycle() {
     <div className="overflow-hidden whitespace-nowrap bg-ribbon h-[200px] md:h-full md:mb-10">
       <div className="flex logos-slides p-10 md:p-0 h-[200px] md:h-full">
         {allImages.map((url, index) => (
-          <Image className="mr-5 gallery-img" key={index} src={url} alt={`Image ${index + 1}`} width={400} height={400} />
+          <Image className="mr-5" key={index} src={url} alt={`Image ${index + 1}`} width={400} height={400} />
         ))}
       </div>
     </div>
