@@ -64,7 +64,7 @@ export default function Home() {
       <div className="flex justify-center items-center pb-10 md:py-20 bg-ribbon">
         <div className="grid grid-cols-2 gap-10 px-5 md:w-[40%]">
           {images.map((src, index) => (
-            <div key={index} className="flex justify-center items-center">
+            <div key={index} className="flex justify-center items-center cursor-pointer">
               <Image
                 src={src}
                 className="object-contain bg-white rounded-3xl shadow-2xl w-full h-full"

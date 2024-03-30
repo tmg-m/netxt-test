@@ -38,7 +38,7 @@ export default function Product() {
       <div className="felx flex-col bg-ribbon p-2 md:px-60">
         {Object.keys(cardsData).map((type) => (
           <div key={type} className="px-5 py-5 md:py-10">
-            <h1>{type}</h1>
+            <p className="border-b-2 text-lg font-medium mb-8 md:mb-10 pb-1">{type}</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 justify-center items-center mt-5">
               {cardsData[type]?.map((card) => (
                 <div key={card.id}>
