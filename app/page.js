@@ -15,7 +15,7 @@ export default function Home() {
       <div className="flex flex-col w-full">
         <HeroSlider />
 
-        <div className="flex gap-10 justify-start px-5 md:justify-center items-center w-full overflow-scroll md:overflow-hidden bg-ribbon py-10 md:py-20">
+        <div className="flex gap-10 justify-start px-5 md:justify-center items-center w-full overflow-scroll md:overflow-hidden bg-ribbon py-5 md:py-20">
           {cardsData.map((card) => (
             <Card
               key={card.id}
