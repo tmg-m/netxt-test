@@ -21,7 +21,7 @@ export default function HeroSlider({ id }) {
 
   return (
     <div className="flex flex-col justify-center items-center py-5 md:py-10 md:pb-10 w-100">
-      <div className="h-[300px] md:h-[500px] w-full relative overflow-hidden">
+      <div className="h-[300px] md:h-[550px] w-full relative overflow-hidden">
         {slides.map((slide, index) => (
           <Image
             key={index}
@@ -44,7 +44,6 @@ export default function HeroSlider({ id }) {
             }`}
           />
         </div>
-        
         ))}
       </div>
     </div>

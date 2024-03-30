@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         <div className="border-b fixed w-full backdrop-blur-md z-50" >
           <MainNav />
         </div>
-        <div className="pt-20">
+        <div className="pt-16">
           {children}
         </div>
         </body>
