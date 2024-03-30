@@ -27,7 +27,7 @@ export default function Home() {
         </div>
 
         {/* <Banner/> */}
-        <div className="bg-ribbon md:pl-60 pb-20">
+        <div className="bg-ribbon md:pl-60 md:pb-20">
           <div className="bg-white py-10 md:py-20 flex flex-col justify-center items-center">
             <div className="flex items-center justify-center relative">
               <span className="pulse md:pulse-md pulse-sm absolute"></span>
@@ -48,9 +48,9 @@ export default function Home() {
             />
           </div>
         </div>
-
-        <div className="flex justify-center items-center bg-ribbon">
-          <div className="grid grid-cols-2 gap-10 pb-20 px-5 md:w-[40%]">
+        <GalleryCycle />
+        <div className="flex justify-center items-center pb-10 md:py-20 bg-ribbon">
+          <div className="grid grid-cols-2 gap-10 px-5 md:w-[40%]">
             <div className="flex justify-center items-center">
               <Image
                 src="/airpodpro1.png"
@@ -99,7 +99,6 @@ export default function Home() {
             width={1000}
           />
         </div>
-        <GalleryCycle />
       </div>
     </div>
   );

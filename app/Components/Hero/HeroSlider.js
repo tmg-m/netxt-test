@@ -39,8 +39,8 @@ export default function HeroSlider({ id }) {
         {slides.map((slide, index) => (
           <span
             key={index}
-            className={`bg-stone-500 rounded-lg ${
-              index === currentSlideIndex ? "bg-stone-700 p-1.5" : "p-1"
+            className={`bg-stone-400 rounded-lg ${
+              index === currentSlideIndex ? "bg-stone-600 p-1.5" : "p-1"
             }`}
             onClick={() => handleSlideClick(index)}
           ></span>
