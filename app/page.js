@@ -4,7 +4,7 @@ import GallerySlides from "./Components/Gallery/GallerySlides";
 import HeroSlider from "./Components/Hero/HeroSlider";
 
 export default function Home() {
-  const cardsData = Array.from({ length: 5 }, (_, index) => ({
+  const cardsData = Array.from({ length: 4 }, (_, index) => ({
     id: index + 1,
     imageUrl: "/iphone15test.png",
     title: "iphone 15 pro max",

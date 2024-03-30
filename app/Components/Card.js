@@ -4,7 +4,7 @@ import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 export default function Card({ title, description, imageUrl, id }) {
   return (
     <div className="flex relative flex-col shadow-2xl rounded-xl bg-white cursor-pointer">
-      <div className="absolute top-4 right-4 rounded-full border p-2 flex items-center justify-center shadow-lg">
+      <div className="absolute top-2 md:top-4 right-2 md:right-4 rounded-full border p-1 md:p-2 flex items-center justify-center shadow-lg">
         <ShoppingBagOutlinedIcon className="text-gray-500" />
       </div>
       <div className="flex flex-col justify-center items-center overflow-hidden p-10">
