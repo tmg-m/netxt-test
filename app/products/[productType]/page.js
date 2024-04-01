@@ -38,9 +38,9 @@ export default function ProductType({ params }) {
     <div className="flex flex-col justify-center">
       <p className="mb-5">Products page {productType}</p>
       <div className="flex gap-4 justify-center items-center bg-ribbon">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-10 justify-center items-center px-5 py-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10 justify-center items-center px-5 py-10">
           {cardsData[productType]?.map((card) => (
-            <div key={card.id} className="flex justify-center items-center mb-10">
+            <div key={card.id} className="flex justify-center items-center mb-10 max-w-[300px]">
               <Card
                 key={card.id}
                 imageUrl={card.imageUrl}

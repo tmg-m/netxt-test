@@ -7,7 +7,7 @@ export default function Card({ title, description, imageUrl, id }) {
       <div className="absolute top-2 md:top-4 right-2 md:right-4 rounded-full border p-1 md:p-2 flex items-center justify-center shadow-lg">
         <ShoppingBagOutlinedIcon className="text-gray-500" />
       </div>
-      <div className="flex flex-col justify-center items-center overflow-hidden p-10">
+      <div className="flex flex-col justify-center items-center overflow-hidden p-8 md:p-10">
         <Image
           className="w-full h-full object-contain"
           src={imageUrl}
@@ -16,9 +16,12 @@ export default function Card({ title, description, imageUrl, id }) {
           width={1000}
         />
       </div>
-      <div className="flex justify-center items-center py-3 md:py-5 w-full border-t">
-        <p>{title}</p>
-      </div>
+      {title && <>
+        <div className="flex justify-center items-center py-3 md:py-5 w-full border-t">
+          <p>{title}</p>
+        </div>  
+      </> 
+      }
     </div>
   );
 }
