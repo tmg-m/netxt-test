@@ -1,9 +1,13 @@
 import Image from "next/image";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import Link from "next/link";
 
-export default function Card({ title, description, imageUrl, id }) {
+export default function Card({ title, description, imageUrl, id, type }) {
+  const handleClick = () => {
+    router.push(`/products/${type}/${id}`);
+  }
   return (
-    <div className="flex relative flex-col shadow-2xl rounded-xl bg-white cursor-pointer">
+    <Link href={`/products/${type}/${id}`} className="flex relative flex-col shadow-2xl rounded-xl bg-white cursor-pointer">
       <div className="absolute top-2 md:top-4 right-2 md:right-4 rounded-full border p-1 md:p-2 flex items-center justify-center shadow-lg">
         <ShoppingBagOutlinedIcon className="text-gray-500" />
       </div>
@@ -22,6 +26,6 @@ export default function Card({ title, description, imageUrl, id }) {
         </div>  
       </> 
       }
-    </div>
+    </Link>
   );
 }
