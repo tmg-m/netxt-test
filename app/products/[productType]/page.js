@@ -43,8 +43,10 @@ export default function ProductType({ params }) {
             <div key={card.id} className="flex justify-center items-center mb-10 max-w-[300px]">
               <Card
                 key={card.id}
+                id={card.id}
                 imageUrl={card.imageUrl}
                 title={card.title}
+                type = {card.type}
                 description={card.description}
               />
             </div>

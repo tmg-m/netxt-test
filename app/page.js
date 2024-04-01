@@ -6,6 +6,7 @@ import HeroSlider from "./Components/Hero/HeroSlider";
 export default function Home() {
   const cardsData = Array.from({ length: 4 }, (_, index) => ({
     id: index + 1,
+    type: 'phone',
     imageUrl: "/iphone15test.png",
     title: "iphone 15 pro max",
     description: "This is iphone 15 pro max with amazing camera.",
@@ -28,6 +29,7 @@ export default function Home() {
             <div className="w-[250px]">
               <Card
                 key={card.id}
+                id={card.id}
                 imageUrl={card.imageUrl}
                 title={card.title}
                 description={card.description}

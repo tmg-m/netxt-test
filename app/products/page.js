@@ -44,6 +44,8 @@ export default function Product() {
                 <div key={card.id}>
                   <Card
                     key={card.id}
+                    id={card.id}
+                    type={card.type}
                     imageUrl={card.imageUrl}
                     title={card.title}
                     description={card.description}
