@@ -1,6 +1,5 @@
 import CtaBtn from "@/app/Components/Button/CtaBtn";
 import GalleryProduct from "@/app/Components/Gallery/GalleryProduct";
-import Image from "next/image";
 
 export default function ProductId({ params }) {
   /* const { productType, productId } = params; */
@@ -38,8 +37,8 @@ export default function ProductId({ params }) {
             </div>
           </div>
           <div className="flex flex-col mt-10 gap-5">
-            <CtaBtn id={1} typeBtn={"checkout"} />
-            <CtaBtn id={1} typeBtn={"basket"} />
+            <CtaBtn id={1} typeBtn={"checkout"} type={'phone'}/>
+            <CtaBtn id={1} typeBtn={"basket"} type={'phone'}/>
           </div>
         </div>
       </div>

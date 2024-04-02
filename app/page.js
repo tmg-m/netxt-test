@@ -30,6 +30,7 @@ export default function Home() {
               <Card
                 key={card.id}
                 id={card.id}
+                type={card.type}
                 imageUrl={card.imageUrl}
                 title={card.title}
                 description={card.description}
