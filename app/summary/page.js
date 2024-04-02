@@ -14,9 +14,9 @@ export default function ConfirmationId() {
   const prices = dataProducts.map((product) => parseFloat(product.price));
   const totalPrice = prices.reduce((acc, price) => acc + price, 0);
   return (
-    <div className="flex flex-col justify-center gap-10 mb-10 p-5 md:p-20">
+    <div className="flex flex-col justify-center gap-5 mb-10 p-5 md:p-20">
       <p className="text-4xl">Summery</p>
-      <div className="flex flex-col gap-10 md:gap-20 bg-ribbon p-10">
+      <div className="flex flex-col gap-10 bg-ribbon p-10">
         {dataProducts.map((product) => (
           <div
             key={product.id}
@@ -55,8 +55,8 @@ export default function ConfirmationId() {
           ))}
            <p className="text-2xl mt-2 border-t-2 text-right px-3">{dataProducts.length}</p>
         </div>
-        <div className="flex flex-col justify-center items-center w-[150px] md:w-[400px] gap-3">
-          <p className="text-2xl">Total</p>
+        <div className="flex flex-col items-center w-[150px] md:w-[400px] gap-3">
+          <p className="text-2xl text-center">Total Ammount</p>
           <p className="text-2xl">${totalPrice}</p>
           <div className="w-full">
             <CtaBtn
