@@ -6,30 +6,38 @@ export default function ProductId({ params }) {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="flex flex-col md:flex-row bg-ribbon w-full justify-center p-20">
-        <div className="flex flex-col md:flex-row rounded-3xl overflow-hidden shadow-2xl mr-20">
-          <Image
-            src={"/samsungPhone1.png"}
-            className="object-contain bg-white w-full border-r-8"
-            alt={`image`}
-            height={400}
-            width={400}
-          />
-          <div className="flex md:flex-col ">
-            <Image
-              src={"/samsungPhone1.png"}
-              className="object-contain bg-white w-full border-b-8"
-              alt={`image`}
-              height={400}
-              width={400}
-            />
-            <Image
-              src={"/samsungPhone1.png"}
-              className="object-contain bg-white w-full"
-              alt={`image`}
-              height={400}
-              width={400}
-            />
+      <div className="flex flex-col md:flex-row bg-ribbon w-full justify-center p-10 gap-10 md:gap-20">
+        <div className="flex justify-center items-center">
+          <div className="flex flex-col gap-3 md:gap-5 md:flex-row rounded-3xl overflow-hidden shadow-2xl w-full">
+            <div className="flex items-center justify-center md:w-[60%] bg-white shadow-2xl">
+              <Image
+                src={"/samsungPhone1.png"}
+                className="object-contain bg-white"
+                alt={`image`}
+                height={400}
+                width={400}
+              />
+            </div>
+            <div className="flex justify-between md:grid md:grid-cols-1 gap-3 md:gap-5 md:grid-rows-2 md:flex-col md:w-[40%]">
+              <div className="flex items-center justify-center shadow-2xl">
+                <Image
+                  src={"/samsungPhone1.png"}
+                  className="object-contain bg-white"
+                  alt={`image`}
+                  height={400}
+                  width={400}
+                />
+              </div>
+              <div className="flex items-center justify-center bg-white shadow-2xl">
+                <Image
+                  src={"/samsungPhone1.png"}
+                  className="object-contain bg-white"
+                  alt={`image`}
+                  height={400}
+                  width={400}
+                />
+              </div>
+            </div>
           </div>
         </div>
 
