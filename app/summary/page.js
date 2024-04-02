@@ -16,11 +16,11 @@ export default function ConfirmationId() {
   return (
     <div className="flex flex-col justify-center gap-10 mb-10 p-5 md:p-20">
       <p className="text-4xl">Summery</p>
-      <div className="flex flex-col gap-10 bg-ribbon p-10">
+      <div className="flex flex-col gap-10 md:gap-20 bg-ribbon p-10">
         {dataProducts.map((product) => (
           <div
             key={product.id}
-            className="flex flex-col md:flex-row justify-between items-end md:items-center pb-5 md:pb-10 border-b-2"
+            className="flex flex-col md:flex-row justify-between gap-10 items-end md:items-center pb-5 md:pb-10 border-b-2"
           >
             <div className="flex justify-between items-center gap-5">
               <div className="max-w-[150px] max-h-[150px]">
@@ -45,8 +45,17 @@ export default function ConfirmationId() {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-end gap-10 px-10 md:px-20">
-        <div className="flex flex-col justify-center items-center w-[400px] gap-3">
+      <div className="flex justify-between gap-5 md:gap-10 px-5 md:px-20">
+        <div>
+          <p className="text-2xl mb-2">Total products</p>
+          {dataProducts.map((product) => (
+            <div key={product.id}>
+              <p>{product.title}</p>
+            </div>
+          ))}
+           <p className="text-2xl mt-2 border-t-2 text-right px-3">{dataProducts.length}</p>
+        </div>
+        <div className="flex flex-col justify-center items-center w-[150px] md:w-[400px] gap-3">
           <p className="text-2xl">Total</p>
           <p className="text-2xl">${totalPrice}</p>
           <div className="w-full">
