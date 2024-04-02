@@ -37,8 +37,8 @@ export default function ProductId({ params }) {
             </div>
           </div>
           <div className="flex flex-col mt-10 gap-5">
-            <CtaBtn id={1} typeBtn={"checkout"} type={'phone'}/>
-            <CtaBtn id={1} typeBtn={"basket"} type={'phone'}/>
+            <CtaBtn id={1} typeBtn={"checkout"} type={'phone'} isEnable/>
+            <CtaBtn id={1} typeBtn={"basket"} type={'phone'} isEnable/>
           </div>
         </div>
       </div>

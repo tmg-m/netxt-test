@@ -11,7 +11,7 @@ export default function Banner() {
           height={200}
         />
       <p>Banner for products</p>
-      <CtaBtn />
+      <CtaBtn isEnable />
     </div>
   );
 }
