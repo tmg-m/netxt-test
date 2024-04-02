@@ -16,24 +16,25 @@ export default function Checkout() {
   const totalPrice = prices.reduce((acc, price) => acc + price, 0);
 
   return (
-    <div className="flex justify-center gap-20 p-20">
-      <div className="flex flex-col w-[600px]">
+    <div className="flex flex-col md:flex-row justify-center gap-16 md:gap-20 bg-ribbon p-10 md:p-20">
+      <div className="flex flex-col gap-10">
+        <p className="text-4xl">Shipping Information</p>
         <div className="flex flex-col gap-3">
           <p>First Name</p>
-          <input className="border-2 rounded-md p-2" type="text" name="firstName" />
+          <input className="border-2 rounded-md p-2" type="text" name="firstName"/>
           <p>Last Name</p>
-          <input className="border rounded-md p-2" type="text" name="lastName" />
+          <input className="border rounded-md p-2" type="text" name="lastName"/>
           <p>Address</p>
-          <input className="border rounded-md p-2" type="text" name="address" />
+          <input className="border rounded-md p-2" type="text" name="address"/>
           <p>Postal Code</p>
-          <input className="border rounded-md p-2" type="text" name="postalCode" />
+          <input className="border rounded-md p-2" type="text" name="postalCode"/>
           <p>Country</p>
-          <input className="border rounded-md p-2" type="text" name="country" />
+          <input className="border rounded-md p-2" type="text" name="country"/>
           <p>Email</p>
-          <input className="border rounded-md p-2" type="text" name="email" />
+          <input className="border rounded-md p-2" type="text" name="email"/>
           <p>Phone</p>
-          <input className="border rounded-md p-2" type="text" name="phone" />
-          <div className="flex gap-2 p-5 bg-ribbon">
+          <input className="border rounded-md p-2" type="text" name="phone"/>
+          <div className="flex gap-2 mt-5">
             <input type="checkbox" name="agreeTerms" />
             <p>Agree to terms and conditions.</p>
           </div>
@@ -61,7 +62,7 @@ export default function Checkout() {
               <p className="text-2xl">Total</p>
               <p className="text-2xl">${totalPrice}</p>
             </div>
-            <CtaBtn isEnable={true} id={1} typeBtn={"checkout"} type={"phone"} />
+            <CtaBtn isEnable={true} confirmation id={1} typeBtn={"checkout"} type={"phone"} />
           </div>  
         </div>
       </div>
