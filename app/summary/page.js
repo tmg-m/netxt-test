@@ -9,15 +9,16 @@ export default function ConfirmationId() {
     currency: "$",
     imageUrl: "/samsungPhone1.png",
     title: "samsung galaxy s21",
-    description: "This is samsung galaxy s21 with amazing camera.",
+    description: "This is samsung galaxy s21 with amazing camera."
   }));
-  const prices = dataProducts.map((product) => parseFloat(product.price));
-  const totalPrice = prices.reduce((acc, price) => acc + price, 0);
+  const prices = dataProducts?.map((product) => parseFloat(product.price));
+  const totalPrice = prices?.reduce((acc, price) => acc + price, 0);
   return (
     <div className="flex flex-col justify-center gap-5 mb-10 p-5 md:p-20">
       <p className="text-4xl">Summery</p>
-      <div className="flex flex-col gap-10 bg-ribbon p-10">
-        {dataProducts.map((product) => (
+      {dataProducts && (<div className="flex flex-col gap-10 bg-ribbon p-10">
+        {dataProducts <= 0 && <p>Add products</p>}
+        {dataProducts?.map((product) => (
           <div
             key={product.id}
             className="flex flex-col md:flex-row justify-between gap-10 items-end md:items-center pb-5 md:pb-10 border-b-2"
@@ -44,17 +45,17 @@ export default function ConfirmationId() {
             </p>
           </div>
         ))}
-      </div>
+      </div>)}
       <div className="flex justify-between gap-5 md:gap-10 px-5 md:px-20">
-        <div>
+        {dataProducts && (<div>
           <p className="text-2xl mb-2">Total products</p>
-          {dataProducts.map((product) => (
+          {dataProducts?.map((product) => (
             <div key={product.id}>
               <p>{product.title}</p>
             </div>
           ))}
            <p className="text-2xl mt-2 border-t-2 text-right px-3">{dataProducts.length}</p>
-        </div>
+        </div>)}
         <div className="flex flex-col items-center w-[150px] md:w-[400px] gap-3">
           <p className="text-2xl text-center">Total Ammount</p>
           <p className="text-2xl">${totalPrice}</p>
