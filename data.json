@@ -1,0 +1,306 @@
+{
+  "products": [
+    {
+      "title": "iPhone 15 Pro Max",
+      "type": "Phone",
+      "provider": "Apple",
+      "currency": "$",
+      "description": "The iPhone 15 Pro Max is the latest flagship smartphone from Apple, featuring a stunning 6.9-inch Super Retina XDR display, powerful A17 Bionic chip, and advanced triple-camera system with enhanced Night mode. With 5G capability, Face ID, and iOS 20, it offers unparalleled performance, security, and innovation.",
+      "image_url": {
+        "main": "https://example.com/iphone15promax.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "128GB": 1299.99,
+        "256GB": 1399.99,
+        "512GB": 1599.99
+      },
+      "color": "gold"
+    },
+
+    {
+      "title": "iPhone 15 Pro",
+      "type": "Phone",
+      "provider": "Apple",
+      "currency": "$",
+      "description": "The iPhone 15 Pro is the latest flagship smartphone from Apple, featuring a stunning 6.9-inch Super Retina XDR display, powerful A17 Bionic chip, and advanced triple-camera system with enhanced Night mode. With 5G capability, Face ID, and iOS 20, it offers unparalleled performance, security, and innovation.",
+      "image_url": {
+        "main": "https://example.com/iphone15promax.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "128GB": 1299.99,
+        "256GB": 1399.99,
+        "512GB": 1599.99
+      },
+      "color": "blue"
+    },
+    {
+      "title": "iPhone 15",
+      "type": "Phone",
+      "provider": "Apple",
+      "currency": "$",
+      "description": "The iPhone 15 is the latest flagship smartphone from Apple, featuring a stunning 6.7-inch Super Retina XDR display, powerful A17 Bionic chip, and advanced dual-camera system. With 5G capability, Face ID, and iOS 20, it offers exceptional performance, security, and innovation.",
+      "image_url": {
+        "main": "https://example.com/iphone15.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "128GB": 1099.99,
+        "256GB": 1199.99,
+        "512GB": 1399.99
+      },
+      "color": "green"
+    },
+    {
+      "title": "iPhone 15",
+      "type": "Phone",
+      "provider": "Apple",
+      "currency": "$",
+      "description": "The iPhone 15 is the latest flagship smartphone from Apple, featuring a stunning 6.7-inch Super Retina XDR display, powerful A17 Bionic chip, and advanced dual-camera system. With 5G capability, Face ID, and iOS 20, it offers exceptional performance, security, and innovation.",
+      "image_url": {
+        "main": "https://example.com/iphone15.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "128GB": 1099.99,
+        "256GB": 1199.99,
+        "512GB": 1399.99
+      },
+      "color": "pink"
+    },
+    {
+      "title": "iPhone 15",
+      "type": "Phone",
+      "provider": "Apple",
+      "currency": "$",
+      "description": "The iPhone 15 is the latest flagship smartphone from Apple, featuring a stunning 6.7-inch Super Retina XDR display, powerful A17 Bionic chip, and advanced dual-camera system. With 5G capability, Face ID, and iOS 20, it offers exceptional performance, security, and innovation.",
+      "image_url": {
+        "main": "https://example.com/iphone15.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "128GB": 1099.99,
+        "256GB": 1199.99,
+        "512GB": 1399.99
+      },
+      "color": "yellow"
+    },
+    {
+      "title": "Samsung Galaxy S24",
+      "type": "Phone",
+      "provider": "Samsung",
+      "currency": "$",
+      "description": "The Samsung Galaxy S24 is the latest flagship smartphone from Samsung, featuring a stunning 6.8-inch Dynamic AMOLED display, powerful Exynos 8 Gen 3 chip, and advanced quad-camera system. With 5G capability, ultrasonic fingerprint sensor, and One UI 7, it offers exceptional performance, security, and user experience.",
+      "image_url": {
+        "main": "https://example.com/samsunggalaxys24.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "128GB": 999.99,
+        "256GB": 1099.99,
+        "512GB": 1299.99
+      },
+      "color": "green"
+    },
+    {
+      "title": "Samsung Galaxy S24",
+      "type": "Phone",
+      "provider": "Samsung",
+      "currency": "$",
+      "description": "The Samsung Galaxy S24 is the latest flagship smartphone from Samsung, featuring a stunning 6.8-inch Dynamic AMOLED display, powerful Exynos 8 Gen 3 chip, and advanced quad-camera system. With 5G capability, ultrasonic fingerprint sensor, and One UI 7, it offers exceptional performance, security, and user experience.",
+      "image_url": {
+        "main": "https://example.com/samsunggalaxys24.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "128GB": 999.99,
+        "256GB": 1099.99,
+        "512GB": 1299.99
+      },
+      "color": "grey"
+    },
+    {
+      "title": "Samsung Galaxy S24",
+      "type": "Phone",
+      "provider": "Samsung",
+      "currency": "$",
+      "description": "The Samsung Galaxy S24 is the latest flagship smartphone from Samsung, featuring a stunning 6.8-inch Dynamic AMOLED display, powerful Exynos 8 Gen 3 chip, and advanced quad-camera system. With 5G capability, ultrasonic fingerprint sensor, and One UI 7, it offers exceptional performance, security, and user experience.",
+      "image_url": {
+        "main": "https://example.com/samsunggalaxys24.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "128GB": 999.99,
+        "256GB": 1099.99,
+        "512GB": 1299.99
+      },
+      "color": "yellow"
+    },
+    {
+      "title": "iPad Pro 11th Generation",
+      "type": "Tablet",
+      "provider": "Apple",
+      "currency": "$",
+      "description": "The iPad Pro 11th Generation is the latest tablet from Apple, featuring a stunning Liquid Retina XDR display, powerful M2 chip, and support for Apple Pencil (3rd generation) and Magic Keyboard. With iPadOS 19, it offers desktop-class performance, advanced multitasking, and 5G connectivity.",
+      "image_url": {
+        "main": "https://example.com/ipadpro11thgen.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "128GB": 899.99,
+        "256GB": 1099.99,
+        "512GB": 1299.99,
+        "1TB": 1499.99
+      },
+      "color": "white"
+    },
+    {
+      "title": "iPad Pro 11th Generation",
+      "type": "Tablet",
+      "provider": "Apple",
+      "currency": "$",
+      "description": "The iPad Pro 11th Generation is the latest tablet from Apple, featuring a stunning Liquid Retina XDR display, powerful M2 chip, and support for Apple Pencil (3rd generation) and Magic Keyboard. With iPadOS 19, it offers desktop-class performance, advanced multitasking, and 5G connectivity.",
+      "image_url": {
+        "main": "https://example.com/ipadpro11thgen.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "128GB": 899.99,
+        "256GB": 1099.99,
+        "512GB": 1299.99,
+        "1TB": 1499.99
+      },
+      "color": "space grey"
+    },
+    {
+      "title": "iPad 10th Generation",
+      "type": "Tablet",
+      "provider": "Apple",
+      "currency": "$",
+      "description": "The iPad 10th Generation is the latest tablet from Apple, featuring a stunning 10.2-inch Retina display, powerful A14 Bionic chip, and support for Apple Pencil (1st generation) and Smart Keyboard. With iPadOS 18, it offers enhanced multitasking, productivity, and creativity.",
+      "image_url": {
+        "main": "https://example.com/ipad10thgen.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "64GB": 329.99,
+        "256GB": 479.99
+      },
+      "color": "pink"
+    },
+
+    {
+      "title": "Samsung Galaxy Tab S9",
+      "type": "Tablet",
+      "provider": "Samsung",
+      "currency": "$",
+      "description": "The Samsung Galaxy Tab S9 is the latest flagship tablet from Samsung, featuring a stunning 11-inch Super AMOLED display, powerful Snapdragon 8 Gen 3 chip, and support for S Pen (included) and Book Cover Keyboard. With Samsung DeX, it offers desktop-like productivity and entertainment experiences.",
+      "image_url": {
+        "main": "https://example.com/samsunggalaxytabs9.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "128GB": 899.99,
+        "256GB": 999.99,
+        "512GB": 1199.99
+      },
+      "color": "grey"
+    },
+
+    {
+      "title": "Samsung QN90A 4K Neo QLED TV",
+      "type": "TV",
+      "provider": "Samsung",
+      "currency": "$",
+      "description": "The Samsung QN90A 4K Neo QLED TV delivers stunning picture quality with Quantum Matrix Technology Pro and Neo Quantum Processor 8K. With Object Tracking Sound+ and Samsung Health, it offers an immersive viewing experience and smart features.",
+      "image_url": {
+        "main": "https://example.com/samsungqn90a.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "55-inch": 1499.99,
+        "65-inch": 1999.99,
+        "75-inch": 2999.99
+      },
+      "color": "black"
+    },
+
+    {
+      "title": "Apple AirPods Pro 2",
+      "type": "Accessories",
+      "provider": "Apple",
+      "currency": "$",
+      "description": "The Apple AirPods Pro 2 are the latest wireless earbuds from Apple, featuring active noise cancellation, transparency mode, and spatial audio. With Adaptive EQ and customizable fit, they offer immersive sound and comfort for all-day use.",
+      "image_url": {
+        "main": "https://example.com/appleairpodspro2.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "Standard": 249.99
+      },
+      "color": "white"
+    },
+
+    {
+      "title": "Samsung Galaxy Buds Pro",
+      "type": "Accessories",
+      "provider": "Samsung",
+      "currency": "$",
+      "description": "The Samsung Galaxy Buds Pro are the latest true wireless earbuds from Samsung, featuring active noise cancellation, immersive sound, and customizable fit. With Intelligent ANC and IPX7 water resistance, they offer a premium audio experience for all-day use.",
+      "image_url": {
+        "main": "https://example.com/samsunggalaxybudspro.jpg",
+        "sub": {
+          "1": "https://example.com/demo_sub_1.jpg",
+          "2": "https://example.com/demo_sub_2.jpg"
+        }
+      },
+      "storage_options": {
+        "Standard": 199.99
+      },
+      "color": "black"
+    }
+  ]
+}
