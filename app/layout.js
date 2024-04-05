@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./tailwind.css";
-import MainNav from "./Components/NavBar/MainNav"
+import MainNav from "./Components/NavBar/MainNav";
+import { AppWrapper } from "./context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,13 +14,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="border-b fixed w-full backdrop-blur-md z-50" >
+        <div className="border-b fixed w-full backdrop-blur-md z-50">
           <MainNav />
         </div>
-        <div className="pt-16">
-          {children}
-        </div>
-        </body>
+        <AppWrapper>
+          <div className="pt-16">{children}</div>
+        </AppWrapper>
+      </body>
     </html>
   );
 }
