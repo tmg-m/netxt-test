@@ -2,6 +2,7 @@
 import CtaBtn from "@/app/Components/Button/CtaBtn";
 import GalleryProduct from "@/app/Components/Gallery/GalleryProduct";
 import { useEffect, useState } from "react";
+import { getProductById } from "@/app/config";
 
 export default function ProductId({ params }) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -10,21 +11,15 @@ export default function ProductId({ params }) {
   const [selectStorage, setSelectStorage] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const getData = async () => {
       try {
-        const response = await fetch(`/api/products/${productType}/${productId}`);
-        if (response.ok) {
-          const [data] = await response.json();
-          setProduct(data);
-          setIsLoaded(true);
-        }
-      } catch (error) {
-        console.error("Error fetching product:", error);
-      }
+        const data = await getProductById({ productType, productId });
+        setProduct(data);
+        setIsLoaded(true);
+      } catch (error) {}
     };
-    fetchData();
+    getData();
   }, [productType, productId]);
-  
 
   useEffect(() => {
     if (product && isLoaded && product.storage_options) {
@@ -33,9 +28,9 @@ export default function ProductId({ params }) {
     }
   }, [product, isLoaded]);
 
-  const handleSizeChange = ({size, price}) => {
-    setSelectStorage({'size': size , 'price': price})
-  }
+  const handleSizeChange = ({ size, price }) => {
+    setSelectStorage({ size: size, price: price });
+  };
 
   return (
     isLoaded && (
@@ -49,7 +44,8 @@ export default function ProductId({ params }) {
                 <p>{product?.type}</p>
                 <p className="text-4xl">{product?.title}</p>
                 <p className="text-2xl">
-                  {product.currency}{selectStorage?.price}
+                  {product.currency}
+                  {selectStorage?.price}
                 </p>
               </div>
               <div className="flex flex-col mt-10 gap-3">
@@ -58,10 +54,13 @@ export default function ProductId({ params }) {
                     <div
                       key={size}
                       className="flex p-5 justify-between items-center bg-white shadow-md rounded-xl cursor-pointer"
-                      onClick={() => handleSizeChange({size, price})}
+                      onClick={() => handleSizeChange({ size, price })}
                     >
                       <p>{size}</p>
-                      <p>{product.currency}{price}</p>
+                      <p>
+                        {product.currency}
+                        {price}
+                      </p>
                     </div>
                   ))}
               </div>
