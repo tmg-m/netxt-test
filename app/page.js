@@ -1,39 +1,28 @@
+"use client";
 import Card from "./Components/Card";
 import Image from "next/image";
 import GallerySlides from "./Components/Gallery/GallerySlides";
 import HeroSlider from "./Components/Hero/HeroSlider";
+import { useAppContext } from "./context";
 
 export default function Home() {
-  const cardsData = Array.from({ length: 4 }, (_, index) => ({
-    id: index + 1,
-    type: 'phone',
-    imageUrl: "/iphone15test.png",
-    title: "iphone 15 pro max",
-    description: "This is iphone 15 pro max with amazing camera.",
-  }));
-
-  const images = [
-    "/airpodpro1.png",
-    "/samsungairbuds.png",
-    "/samsungTablet.png",
-    "/samsungPhone1.png",
-  ];
+  const { hotToday, mixDataCard } = useAppContext();
 
   return (
     <div className="flex flex-col w-full">
       <HeroSlider />
 
       <div className="flex items-center justify-start md:justify-center gap-4 overflow-scroll md:overflow-hidden bg-ribbon p-5">
-        {cardsData.map((card) => (
-          <div key={card.id} className="flex justify-center items-start">
+        {hotToday?.map((phone) => (
+          <div key={phone.id} className="flex justify-center items-start">
             <div className="w-[250px]">
               <Card
-                key={card.id}
-                id={card.id}
-                type={card.type}
-                imageUrl={card.imageUrl}
-                title={card.title}
-                description={card.description}
+                key={phone.id}
+                id={phone.id}
+                type={phone.type}
+                imageUrl={"/iphone15test.png"}
+                title={phone.title}
+                description={phone.description}
               />
             </div>
           </div>
@@ -66,18 +55,12 @@ export default function Home() {
 
       <div className="flex justify-center items-center pb-10 md:py-20 bg-ribbon">
         <div className="grid grid-cols-2 gap-10 px-5 md:w-[40%]">
-          {images.map((src, index) => (
-            <div key={index} className="flex justify-center items-center cursor-pointer">
-              <Image
-                src={src}
-                className="object-contain bg-white rounded-3xl shadow-2xl w-full h-full"
-                alt={`image-${index}`}
-                height={400}
-                width={400}
-              />
-              {/* <Card
-                imageUrl={src}
-              /> */}
+          {mixDataCard.map((src, index) => (
+            <div
+              key={index}
+              className="flex justify-center items-center cursor-pointer"
+            >
+              <Card imageUrl={src.image_url.main} id={src.id} type={src.type} />
             </div>
           ))}
         </div>
