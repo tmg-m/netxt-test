@@ -10,6 +10,8 @@ export default function ProductId({ params }) {
   const { productType, productId } = params;
   const [product, setProduct] = useState(null);
   const [selectStorage, setSelectStorage] = useState(null);
+  const [selectedProductwithStorage, setSelectedProductwithStorage] =
+    useState(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -31,7 +33,17 @@ export default function ProductId({ params }) {
     }
   }, [product, isLoaded]);
 
-  const handleSizeChange = ({ size, price }) => {
+  useEffect(() => {
+    if (product) {
+      const copyProduct = { ...product };
+      setSelectedProductwithStorage({
+        ...copyProduct,
+        storage_options: [selectStorage],
+      });
+    }
+  }, [product, selectStorage]);
+
+  const handlePriceChange = ({ size, price }) => {
     setSelectStorage({ size: size, price: price });
   };
 
@@ -56,8 +68,13 @@ export default function ProductId({ params }) {
                   product.storage_options.map(({ size, price }) => (
                     <div
                       key={size}
-                      className="flex p-5 justify-between items-center bg-white shadow-md rounded-xl cursor-pointer"
-                      onClick={() => handleSizeChange({ size, price })}
+                      className={`flex p-5 justify-between items-center bg-white shadow-md rounded-xl cursor-pointer ${
+                        selectStorage?.size === size &&
+                        product.storage_options.length > 1
+                          ? "border-4 border-red-500"
+                          : ""
+                      }`}
+                      onClick={() => handlePriceChange({ size, price })}
                     >
                       <p>{size}</p>
                       <p>
@@ -73,7 +90,7 @@ export default function ProductId({ params }) {
                 id={productId}
                 typeBtn={"checkout"}
                 type={productType}
-                singleProduct={product}
+                selectedProductwithStorage={selectedProductwithStorage}
                 isEnable
               />
               <CtaBtn
