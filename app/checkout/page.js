@@ -7,10 +7,6 @@ export default function Checkout() {
   const { singleProductCheckout } = globalStore((state) => state)
   const [products, setproducts] = useState(singleProductCheckout? singleProductCheckout : [])
 
-  console.log(products)
-
-  console.log(products)
-
   const prices = products.map((product) => parseFloat(product.storage_options[0].price));
   const totalPrice = prices.reduce((acc, price) => acc + price, 0);
 
