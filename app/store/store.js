@@ -26,11 +26,11 @@ export const globalStore = create((set, get) => {
     hotToday,
     singleProductCheckout,
     updateSingleProductCheckout: (product) => {
-      const currentState = get(); // Get current state
-      const updatedCheckout = [...currentState.singleProductCheckout, product];
+      const currentState = get();
+      const updatedCheckout = [product];
       console.log("Updated singleProductCheckout:", updatedCheckout);
       set({ ...currentState, singleProductCheckout: updatedCheckout });
-      return updatedCheckout; // Returning the updated state for verification
+      return updatedCheckout;
     },
   };
 });
