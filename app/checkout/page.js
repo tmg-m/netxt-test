@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CtaBtn from "../Components/Button/CtaBtn";
 
 export default function Checkout() {
@@ -21,19 +20,31 @@ export default function Checkout() {
         <p className="text-4xl">Shipping Information</p>
         <div className="flex flex-col gap-3">
           <p>First Name</p>
-          <input className="border-2 rounded-md p-2" type="text" name="firstName"/>
+          <input
+            className="border-2 rounded-md p-2"
+            type="text"
+            name="firstName"
+          />
           <p>Last Name</p>
-          <input className="border rounded-md p-2" type="text" name="lastName"/>
+          <input
+            className="border rounded-md p-2"
+            type="text"
+            name="lastName"
+          />
           <p>Address</p>
-          <input className="border rounded-md p-2" type="text" name="address"/>
+          <input className="border rounded-md p-2" type="text" name="address" />
           <p>Postal Code</p>
-          <input className="border rounded-md p-2" type="text" name="postalCode"/>
+          <input
+            className="border rounded-md p-2"
+            type="text"
+            name="postalCode"
+          />
           <p>Country</p>
-          <input className="border rounded-md p-2" type="text" name="country"/>
+          <input className="border rounded-md p-2" type="text" name="country" />
           <p>Email</p>
-          <input className="border rounded-md p-2" type="text" name="email"/>
+          <input className="border rounded-md p-2" type="text" name="email" />
           <p>Phone</p>
-          <input className="border rounded-md p-2" type="text" name="phone"/>
+          <input className="border rounded-md p-2" type="text" name="phone" />
           <div className="flex gap-2 mt-5">
             <input type="checkbox" name="agreeTerms" />
             <p>Agree to terms and conditions.</p>
@@ -62,8 +73,14 @@ export default function Checkout() {
               <p className="text-2xl">Total</p>
               <p className="text-2xl">${totalPrice}</p>
             </div>
-            <CtaBtn isEnable={true} confirmation id={1} typeBtn={"checkout"} type={"phone"} />
-          </div>  
+            <CtaBtn
+              isEnable={true}
+              confirmation
+              id={1}
+              typeBtn={"checkout"}
+              type={"phone"}
+            />
+          </div>
         </div>
       </div>
     </div>
