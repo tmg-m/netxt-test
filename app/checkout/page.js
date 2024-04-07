@@ -1,21 +1,21 @@
+"use client"
+import { useState } from "react";
 import CtaBtn from "../Components/Button/CtaBtn";
+import { globalStore } from "@/app/store/store"
 
 export default function Checkout() {
-  const dataProducts = Array.from({ length: 4 }, (_, index) => ({
-    id: index + 1,
-    type: "phone",
-    price: "800",
-    currency: "$",
-    imageUrl: "/samsungPhone1.png",
-    title: "samsung galaxy s21",
-    description: "This is samsung galaxy s21 with amazing camera.",
-  }));
+  const { singleProductCheckout } = globalStore((state) => state)
+  const [products, setproducts] = useState(singleProductCheckout? singleProductCheckout : [])
 
-  const prices = dataProducts.map((product) => parseFloat(product.price));
+  console.log(products)
+
+  console.log(products)
+
+  const prices = products.map((product) => parseFloat(product.storage_options[0].price));
   const totalPrice = prices.reduce((acc, price) => acc + price, 0);
 
   return (
-    <div className="flex flex-col md:flex-row justify-center gap-16 md:gap-20 bg-ribbon p-10 md:p-20">
+    products && <div className="flex flex-col md:flex-row justify-center gap-16 md:gap-20 bg-ribbon p-10 md:p-20">
       <div className="flex flex-col gap-10">
         <p className="text-4xl">Shipping Information</p>
         <div className="flex flex-col gap-3">
@@ -56,7 +56,7 @@ export default function Checkout() {
           <div className="flex flex-col gap-10">
             <p className="text-4xl">Order summery</p>
             <div className="flex flex-col gap-3">
-              {dataProducts.map((product) => (
+              {products.map((product) => (
                 <div
                   key={product.id}
                   className="flex p-5 gap-10 justify-between items-center bg-white shadow-md rounded-xl cursor-pointer"
@@ -64,14 +64,14 @@ export default function Checkout() {
                   <p>{product.title} </p>
                   <p>
                     {product.currency}
-                    {product.price}
+                    {product.storage_options[0].price}
                   </p>
                 </div>
               ))}
             </div>
             <div className="flex justify-between items-center">
               <p className="text-2xl">Total</p>
-              <p className="text-2xl">${totalPrice}</p>
+              <p className="text-2xl">{totalPrice}</p>
             </div>
             <CtaBtn
               isEnable={true}
