@@ -1,47 +1,27 @@
 "use client";
-import { createContext, useState, useContext, useEffect } from "react";
-import { data } from "@/data.json";
-
-const AppContext = createContext(data);
+import { createContext, useContext } from "react";
+const AppContext = createContext();
 
 export function AppWrapper({ children }) {
-  const [state, setState] = useState({
-    allProducts: [],
-    phones: [],
-    accessories: [],
-    tablets: [],
-    tvs: [],
-    hotToday:[],
-    mixDataCard:[]
-  });
-  useEffect(() => {
-    const allProducts = data.products;
-    const phone = data.products.filter((product) => product.type === "phone");
-    const accessories = data.products.filter(
-      (product) => product.type === "accessories"
-    );
-    const tablet = data.products.filter((product) => product.type === "tablet");
-    const tv = data.products.filter((product) => product.type === "tv");
+  const getProductById = async ({ productType, productId }) => {
+    try {
+      const response = await fetch(
+        `http://localhost:3000/api/products/${productType}/${productId}`
+      );
+      if (response.ok) {
+        const [data] = await response.json();
+        return data;
+      }
+    } catch (error) {
+      console.error("Error fetching product:", error);
+    }
+  };
 
-    const hotToday = [...phone.slice(0, 3), ...phone.slice(5, 6)];
-    const mixDataCard = [
-      ...accessories,
-      ...tablet.slice(3, 5),
-      ...phone.slice(7, 8),
-    ];
-
-    setState({
-      allProducts,
-      phone,
-      accessories,
-      tablet,
-      tv,
-      hotToday,
-      mixDataCard
-    });
-  }, []);
-
-  return <AppContext.Provider value={state}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={{ getProductById }}>
+      {children}
+    </AppContext.Provider>
+  );
 }
 
 export function useAppContext() {
