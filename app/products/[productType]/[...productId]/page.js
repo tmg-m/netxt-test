@@ -2,9 +2,10 @@
 import CtaBtn from "@/app/Components/Button/CtaBtn";
 import GalleryProduct from "@/app/Components/Gallery/GalleryProduct";
 import { useEffect, useState } from "react";
-import { getProductById } from "@/app/config";
+import { useAppContext } from "@/app/context/index";
 
 export default function ProductId({ params }) {
+  const { getProductById } = useAppContext();
   const [isLoaded, setIsLoaded] = useState(false);
   const { productType, productId } = params;
   const [product, setProduct] = useState(null);
@@ -16,10 +17,12 @@ export default function ProductId({ params }) {
         const data = await getProductById({ productType, productId });
         setProduct(data);
         setIsLoaded(true);
-      } catch (error) {}
+      } catch (error) {
+        console.error("Error fetching product:", error);
+      }
     };
     getData();
-  }, [productType, productId]);
+  }, [getProductById, productType, productId]);
 
   useEffect(() => {
     if (product && isLoaded && product.storage_options) {
