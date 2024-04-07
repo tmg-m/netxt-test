@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { data } from "@/data.json";
 
-export const globalStore = create(() => {
+export const globalStore = create((set, get) => {
   const allProducts = data.products;
   const phone = allProducts.filter((product) => product.type === "phone");
   const accessories = allProducts.filter((product) => product.type === "accessories");
@@ -14,6 +14,7 @@ export const globalStore = create(() => {
     ...tablet.slice(3, 5),
     ...phone.slice(7, 8)
   ];
+  const singleProductCheckout = []
 
   return {
     allProducts,
@@ -22,6 +23,14 @@ export const globalStore = create(() => {
     tablet,
     tv,
     mixDataCard,
-    hotToday
+    hotToday,
+    singleProductCheckout,
+    updateSingleProductCheckout: (product) => {
+      const currentState = get(); // Get current state
+      const updatedCheckout = [...currentState.singleProductCheckout, product];
+      console.log("Updated singleProductCheckout:", updatedCheckout);
+      set({ ...currentState, singleProductCheckout: updatedCheckout });
+      return updatedCheckout; // Returning the updated state for verification
+    },
   };
 });

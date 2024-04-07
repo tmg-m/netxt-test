@@ -3,7 +3,7 @@ import Card from "./Components/Card";
 import Image from "next/image";
 import GallerySlides from "./Components/Gallery/GallerySlides";
 import HeroSlider from "./Components/Hero/HeroSlider";
-import { globalStore } from "./store/store"
+import { globalStore } from "@/app/store/store"
 
 export default function Home() {
   const { hotToday, mixDataCard } = globalStore((state) => state)
