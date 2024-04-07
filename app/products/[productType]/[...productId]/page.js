@@ -70,6 +70,7 @@ export default function ProductId({ params }) {
                 id={productId}
                 typeBtn={"checkout"}
                 type={productType}
+                singleProduct={product}
                 isEnable
               />
               <CtaBtn

@@ -1,5 +1,12 @@
-"use client";
-export default function CtaBtn({ id, type, typeBtn, isEnable, confirmation }) {
+export default function CtaBtn({
+  id,
+  type,
+  typeBtn,
+  isEnable,
+  confirmation,
+  singleProduct,
+}) {
+
   const handleClick = () => {
     const params = {
       id: id,
@@ -9,13 +16,14 @@ export default function CtaBtn({ id, type, typeBtn, isEnable, confirmation }) {
     if (isEnable) {
       if (confirmation) {
         window.location.href = `/checkout/confirmation?${queryString}`;
+      } else if (singleProduct) {
+        window.location.href = `/checkout/?${queryString}&singleProduct=${singleProduct}`;
       } else {
         typeBtn == "checkout"
           ? (window.location.href = `/checkout/?${queryString}`)
           : console.log("here");
       }
     }
-    console.log(isEnable);
   };
 
   return (
