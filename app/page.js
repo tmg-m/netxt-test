@@ -3,11 +3,10 @@ import Card from "./Components/Card";
 import Image from "next/image";
 import GallerySlides from "./Components/Gallery/GallerySlides";
 import HeroSlider from "./Components/Hero/HeroSlider";
-import { useAppContext } from "./context";
+import { globalStore } from "./store/store"
 
 export default function Home() {
-  const { hotToday, mixDataCard } = useAppContext();
-
+  const { hotToday, mixDataCard } = globalStore((state) => state)
   return (
     <div className="flex flex-col w-full">
       <HeroSlider />
