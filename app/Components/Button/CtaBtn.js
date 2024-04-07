@@ -9,7 +9,7 @@ export default function CtaBtn({
   typeBtn,
   isEnable,
   confirmation,
-  singleProduct,
+  selectedProductwithStorage
 }) {
   const updateSingleProductCheckout = globalStore(
     (state) => state.updateSingleProductCheckout
@@ -24,7 +24,7 @@ export default function CtaBtn({
       let destinationUrl = "/checkout";
       if (confirmation) {
         destinationUrl += "/confirmation";
-      } else if (singleProduct) {
+      } else if (selectedProductwithStorage) {
         destinationUrl += `?${queryString}`;
       } else {
         destinationUrl += `?${queryString}`;
@@ -32,10 +32,10 @@ export default function CtaBtn({
 
       setUrl(destinationUrl);
     }
-  }, [id, type, isEnable, confirmation, singleProduct]);
+  }, [id, type, isEnable, confirmation, selectedProductwithStorage]);
 
   const handleClick = () => {
-    if (isEnable && singleProduct) {updateSingleProductCheckout(singleProduct);}
+    if (isEnable && selectedProductwithStorage) {updateSingleProductCheckout(selectedProductwithStorage);}
   }
 
   return (
