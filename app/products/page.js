@@ -49,6 +49,7 @@ export default function Product() {
                     imageUrl={card.imageUrl}
                     title={card.title}
                     description={card.description}
+                    showAddToCart
                   />
                 </div>
               ))}

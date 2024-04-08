@@ -48,6 +48,7 @@ export default function ProductType({ params }) {
                 title={card.title}
                 type = {card.type}
                 description={card.description}
+                showAddToCart
               />
             </div>
           ))}

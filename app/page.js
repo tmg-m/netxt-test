@@ -22,6 +22,7 @@ export default function Home() {
                 imageUrl={"/iphone15test.png"}
                 title={phone.title}
                 description={phone.description}
+                showAddToCart
               />
             </div>
           </div>
@@ -59,7 +60,7 @@ export default function Home() {
               key={index}
               className="flex justify-center items-center cursor-pointer"
             >
-              <Card imageUrl={src.image_url.main} id={src.id} type={src.type} />
+              <Card imageUrl={src.image_url.main} id={src.id} type={src.type} showAddToCart />
             </div>
           ))}
         </div>
