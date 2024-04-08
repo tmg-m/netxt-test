@@ -33,7 +33,7 @@ export default function MainNav() {
             <Link href='/about' className="mx-5">About</Link>
           </div>
           <div className="flex gap-5 text-gray-500">
-            <Link href="#"><LocalShippingOutlinedIcon href="#" className='' /></Link>
+            <Link href="/orders"><LocalShippingOutlinedIcon href="#" className='' /></Link>
             <Link href="/summary"><ShoppingBagOutlinedIcon className='' /></Link>
             <Link href="#"><AccountCircleOutlinedIcon href="" className='' /></Link>
           </div>
