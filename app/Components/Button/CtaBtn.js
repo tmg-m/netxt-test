@@ -42,7 +42,7 @@ export default function CtaBtn({
     <Link
       href={url}
       className={`flex items-center justify-center px-8 py-3 text-white rounded-3xl cursor-pointer 
-    ${!isEnable ? "bg-red-300" : ""}
+    ${!isEnable ? "bg-red-400" : ""}
     ${typeBtn === "checkout" ? "bg-red-600" : "bg-black"}`}
     onClick={handleClick}
     >
