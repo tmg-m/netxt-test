@@ -68,11 +68,11 @@ export default function ProductId({ params }) {
                   product.storage_options.map(({ size, price }) => (
                     <div
                       key={size}
-                      className={`flex p-5 justify-between items-center bg-white shadow-md rounded-xl cursor-pointer ${
+                      className={`flex p-5 justify-between items-center bg-white border-4 shadow-md rounded-xl cursor-pointer ${
                         selectStorage?.size === size &&
                         product.storage_options.length > 1
-                          ? "border-4 border-red-500"
-                          : ""
+                          ? "border-red-500"
+                          : "border-transparent"
                       }`}
                       onClick={() => handlePriceChange({ size, price })}
                     >
