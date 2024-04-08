@@ -27,6 +27,7 @@ export default function ConfirmationId() {
         <p className="text-lg">
           Your shipping order number is : {orders?.orderNumber}
         </p>
+        <p className="text-md">You can now check your purchases in my shipping.</p>
 
         <div className="flex flex-col justify-center items-center w-full bg-ribbon gap-5 p-10 md:p-20 mt-5 md:mt-10">
           <p className="text-2xl mb-5">Your have purchased</p>

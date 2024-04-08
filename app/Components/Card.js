@@ -8,10 +8,10 @@ export default function Card({ title, description, imageUrl, id, type, showAddTo
   }
   return (
     <Link href={`/products/${type}/${id}`} className="flex relative flex-col shadow-2xl rounded-xl bg-white cursor-pointer">
-      {showAddToCart && <div className="absolute top-2 md:top-4 right-2 md:right-4 rounded-full border p-1 md:p-2 flex items-center justify-center shadow-lg">
+      {showAddToCart && <div className="absolute top-2 md:top-4 right-2 md:right-4 rounded-full border p-1 md:p-2 flex items-center justify-center shadow-2xl bg-white">
         <ShoppingBagOutlinedIcon className="text-gray-500" />
       </div>}
-      <div className="flex flex-col justify-center items-center overflow-hidden p-8 md:p-10">
+      <div className="flex flex-col justify-center items-center overflow-hidden p-5">
         <Image
           className="w-full h-full object-contain"
           src={imageUrl}
