@@ -6,18 +6,22 @@ import Image from "next/image";
 export default function Orders() {
   const { purchaseOrders } = globalStore((state) => state);
   const [orders, setOrders] = useState();
-  const [products, setProducts] = useState();
 
   useEffect(() => {
     if (purchaseOrders) {
       setOrders(purchaseOrders);
-      setProducts(purchaseOrders[0]?.products);
     }
   }, [purchaseOrders]);
 
-  const totalPrices = products?.flatMap(product =>
-    product.storage_options.map(option => parseFloat(option.price))
-  ).reduce((total, price) => total + price, 0);
+  const totalPrices = orders?.products
+    ?.flatMap((product) =>
+      product.storage_options.map((option) => parseFloat(option.price))
+    )
+    .reduce((total, price) => total + price, 0);
+
+  const handlePriceOrders = (products) => {
+    return products?.reduce((acc, product) => product.storage_options.map((option) => option.price).reduce((subtotal, price) => subtotal + price, 0), 0)
+  }
 
   return (
     <div className="flex flex-col justify-center gap-5 mb-10 p-5 md:p-20">
@@ -29,9 +33,9 @@ export default function Orders() {
               Order number :{" "}
               <span className="font-normal">{order.orderNumber}</span>
             </p>
-            {products && (
+            {order.products && (
               <div>
-                {products?.map((product) => (
+                {order.products?.map((product) => (
                   <div
                     key={product.id}
                     className="flex flex-col md:flex-row justify-between items-center gap-10 pb-5 md:pb-10 border-b-2"
@@ -60,19 +64,19 @@ export default function Orders() {
               </div>
             )}
             <div className="flex justify-center items-center gap-5 md:gap-10 md:self-end">
-              {products && (
+              {order.products && (
                 <div>
                   <p className="text-2xl mb-2">Total products</p>
-                  {products?.map((product) => (
+                  {order.products?.map((product) => (
                     <div key={product.id}>
                       <p>{product.title}</p>
                     </div>
                   ))}
                   <p className="text-2xl mt-2 border-t-2 text-right px-3">
-                    {products.length}
+                    {order.products.length}
                   </p>
                   <p className="text-2xl mt-2 border-t-2 text-right px-3">
-                    {totalPrices}
+                    ${handlePriceOrders(order?.products)}
                   </p>
                 </div>
               )}
