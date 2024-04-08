@@ -52,11 +52,13 @@ export default function Checkout() {
   }, [formData]);
 
   const handleConfirmation = async (e) => {
-    updatePurchaseOrders({
-      orderNumber: Math.floor(10000000 + Math.random() * 90000000).toString(),
-      userData: formData,
-      products: products,
-    });
+    if (isFormValid) {
+      updatePurchaseOrders({
+        orderNumber: Math.floor(10000000 + Math.random() * 90000000).toString(),
+        userData: formData,
+        products: products,
+      });
+    }
   };
 
   return (
@@ -71,7 +73,6 @@ export default function Checkout() {
               type="text"
               name="firstName"
               placeholder="Your first name"
-              defaultValue={formData.firstName}
               value={formData.firstName}
               onChange={handleChange}
               required
@@ -82,7 +83,6 @@ export default function Checkout() {
               type="text"
               name="lastName"
               placeholder="Your last name"
-              defaultValue={formData.lastName}
               value={formData.lastName}
               onChange={handleChange}
               required
@@ -93,7 +93,6 @@ export default function Checkout() {
               type="text"
               name="address"
               placeholder="Your address"
-              defaultValue={formData.address}
               value={formData.address}
               onChange={handleChange}
               required
@@ -104,7 +103,6 @@ export default function Checkout() {
               type="text"
               name="postalCode"
               placeholder="00000"
-              defaultValue={formData.postalCode}
               value={formData.postalCode}
               onChange={handleChange}
               required
@@ -115,7 +113,6 @@ export default function Checkout() {
               type="text"
               name="country"
               placeholder="Your country"
-              defaultValue={formData.country}
               value={formData.country}
               onChange={handleChange}
               required
@@ -126,7 +123,6 @@ export default function Checkout() {
               type="email"
               name="email"
               placeholder="example@test.com"
-              defaultValue={formData.email}
               value={formData.email}
               onChange={handleChange}
               required
@@ -137,7 +133,6 @@ export default function Checkout() {
               type="tel"
               name="phone"
               placeholder="+00 123456789"
-              defaultValue={formData.phone}
               value={formData.phone}
               onChange={handleChange}
               required
