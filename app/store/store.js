@@ -14,8 +14,10 @@ export const globalStore = create((set, get) => {
     ...tablet.slice(3, 5),
     ...phone.slice(7, 8)
   ];
-  const singleProductCheckout = []
   const purchaseOrders = []
+  const productCart = []
+  const singleProductCheckout = []
+  const allProductCheckout = []
 
   return {
     allProducts,
@@ -25,12 +27,20 @@ export const globalStore = create((set, get) => {
     tv,
     mixDataCard,
     hotToday,
-    singleProductCheckout,
     purchaseOrders,
+    productCart,
+    singleProductCheckout,
+    allProductCheckout,
     updateSingleProductCheckout: (product) => {
       const currentState = get();
       const updatedCheckout = [product];
-      set({ ...currentState, singleProductCheckout: updatedCheckout });
+      set({ ...currentState, singleProductCheckout: product !== null ? updatedCheckout : [] });
+      return updatedCheckout;
+    },
+    updateAllProductCheckout: (product) => {
+      const currentState = get();
+      const updatedCheckout = product;
+      set({ ...currentState, allProductCheckout: updatedCheckout });
       return updatedCheckout;
     },
     updatePurchaseOrders: (submitData) => {
@@ -38,6 +48,12 @@ export const globalStore = create((set, get) => {
       const updatedPurchaseOrders = [...currentState.purchaseOrders, submitData];
       set({ ...currentState, purchaseOrders: updatedPurchaseOrders });
       return updatedPurchaseOrders;
+    },    
+    updateProductCart: (product) => {
+      const currentState = get();
+      const updatedProductCart = [...currentState.productCart, product];
+      set({ ...currentState, productCart: updatedProductCart});
+      return updatedProductCart;
     },    
   };
 });
