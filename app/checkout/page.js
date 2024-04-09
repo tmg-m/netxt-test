@@ -4,12 +4,15 @@ import { globalStore } from "@/app/store/store";
 import CtaBtn from "../Components/Button/CtaBtn";
 
 export default function Checkout() {
-  const { singleProductCheckout, updatePurchaseOrders, purchaseOrders } =
+  const { singleProductCheckout, updatePurchaseOrders, allProductCheckout } =
     globalStore((state) => state);
   const [products, setproducts] = useState(
-    singleProductCheckout ? singleProductCheckout : []
+    singleProductCheckout.length > 0 ?  singleProductCheckout : allProductCheckout
   );
   const [isFormValid, setIsFormValid] = useState(false);
+
+  console.log(singleProductCheckout.length)
+  console.log(allProductCheckout)
 
   const prices = products.map((product) =>
     parseFloat(product.storage_options[0].price)
