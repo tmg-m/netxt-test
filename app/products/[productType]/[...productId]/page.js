@@ -38,7 +38,7 @@ export default function ProductId({ params }) {
       const copyProduct = { ...product };
       setSelectedProductwithStorage({
         ...copyProduct,
-        storage_options: [selectStorage],
+        storage_options_select: [selectStorage],
       });
     }
   }, [product, selectStorage]);
@@ -52,7 +52,6 @@ export default function ProductId({ params }) {
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col md:flex-row bg-ribbon w-full justify-center p-10 md:p-20 gap-10 md:gap-20">
           <GalleryProduct galleryImg={product.image_url} />
-
           <div className="flex flex-col justify-between md:min-w-[300px] md:max-w-[400px]">
             <div className="flex flex-col justify-between">
               <div className="flex flex-col gap-5">
@@ -95,8 +94,9 @@ export default function ProductId({ params }) {
               />
               <CtaBtn
                 id={productId}
-                typeBtn={"basket"}
+                typeBtn={"cart"}
                 type={productType}
+                selectedProductwithStorage={selectedProductwithStorage}
                 isEnable
               />
             </div>
