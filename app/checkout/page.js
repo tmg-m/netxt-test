@@ -11,9 +11,6 @@ export default function Checkout() {
   );
   const [isFormValid, setIsFormValid] = useState(false);
 
-  console.log(singleProductCheckout.length)
-  console.log(allProductCheckout)
-
   const prices = products.map((product) =>
     parseFloat(product.storage_options[0].price)
   );
