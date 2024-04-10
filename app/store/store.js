@@ -62,6 +62,12 @@ export const globalStore = create((set, get) => {
       const updatedProductCart = [...currentState.productCart, product];
       set({ ...currentState, productCart: product !== null ? updatedProductCart : []});
       return updatedProductCart;
-    },    
+    },
+    removeProductFromCart: (products) => {
+      const currentState = get();
+      const removeProductFromTheCart = products;
+      set({ ...currentState, productCart: removeProductFromTheCart});
+      return removeProductFromTheCart;
+    },     
   };
 });

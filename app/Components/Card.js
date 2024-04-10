@@ -3,7 +3,6 @@ import Image from "next/image";
 import CheckCircleOutlineRoundedIcon from "@mui/icons-material/CheckCircleOutlineRounded";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import Link from "next/link";
-import { useAppContext } from "@/app/context/index";
 import { globalStore } from "@/app/store/store";
 import { useEffect, useState } from "react";
 
@@ -15,8 +14,7 @@ export default function Card({
   type,
   showAddToCart,
 }) {
-  const { getProductById } = useAppContext();
-  const { updateProductCart, productCart } = globalStore((state) => state);
+  const { updateProductCart, productCart, removeProductFromCart, allProducts } = globalStore((state) => state);
 
   const [isInCart, setIsInCart] = useState(false);
 
@@ -30,15 +28,23 @@ export default function Card({
 
   const handleClick = async () => {
     const typeAndId = { productType: type, productId: id };
-    try {
-      const dataProduct = await getProductById(typeAndId);
-      const product = {
-        ...dataProduct,
-        storage_options_select: [dataProduct.storage_options[0]],
-      };
-      await updateProductCart(product);
-    } catch (error) {
-      console.error("Error fetching product:", error);
+    if (isInCart) {
+      setIsInCart(false);
+      const products = [...productCart.filter(product => product.id !== id)];
+      removeProductFromCart(products)
+
+    } else {
+      try {
+        setIsInCart(true);
+        const findProduct = allProducts.find(item => item.id === id);
+        const product = {
+          ...findProduct,
+          storage_options_select: [findProduct.storage_options[0]],
+        };
+        await updateProductCart(product);
+      } catch (error) {
+        console.error("Error fetching product:", error);
+      }
     }
   };
   return (
@@ -53,7 +59,10 @@ export default function Card({
               <ShoppingBagOutlinedIcon className="text-gray-500" />
             </div>
           ) : (
-            <div className="absolute top-2 md:top-4 right-2 md:right-4 rounded-full border p-1 md:p-2 flex items-center justify-center shadow-2xl bg-white">
+            <div
+              onClick={handleClick}
+              className="absolute top-2 md:top-4 right-2 md:right-4 rounded-full border p-1 md:p-2 flex items-center justify-center shadow-2xl bg-white"
+            >
               <CheckCircleOutlineRoundedIcon className="text-green-600" />
             </div>
           )}
