@@ -1,6 +1,8 @@
 "use client";
 import { createContext, useContext } from "react";
+
 const AppContext = createContext();
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export function AppWrapper({ children }) {
   const fetchProductData = async (url) => {
@@ -15,12 +17,12 @@ export function AppWrapper({ children }) {
   };
   
   const getProductById = async ({ productType, productId }) => {
-    const url = `http://localhost:3000/api/products/${productType}/${productId}`;
+    const url = `${baseUrl}/api/products/${productType}/${productId}`;
     return await fetchProductData(url);
   };
-  
+
   const getProductByType = async (productType) => {
-    const url = `http://localhost:3000/api/products/${productType}`;
+    const url = `${baseUrl}/api/products/${productType}`;
     return await fetchProductData(url);
   };
 
