@@ -3,22 +3,29 @@ import { createContext, useContext } from "react";
 const AppContext = createContext();
 
 export function AppWrapper({ children }) {
-  const getProductById = async ({ productType, productId }) => {
+  const fetchProductData = async (url) => {
     try {
-      const response = await fetch(
-        `http://localhost:3000/api/products/${productType}/${productId}`
-      );
+      const response = await fetch(url);
       if (response.ok) {
-        const [data] = await response.json();
-        return data;
+        return await response.json();
       }
     } catch (error) {
       console.error("Error fetching product:", error);
     }
   };
+  
+  const getProductById = async ({ productType, productId }) => {
+    const url = `http://localhost:3000/api/products/${productType}/${productId}`;
+    return await fetchProductData(url);
+  };
+  
+  const getProductByType = async (productType) => {
+    const url = `http://localhost:3000/api/products/${productType}`;
+    return await fetchProductData(url);
+  };
 
   return (
-    <AppContext.Provider value={{ getProductById }}>
+    <AppContext.Provider value={{ getProductById, getProductByType }}>
       {children}
     </AppContext.Provider>
   );
