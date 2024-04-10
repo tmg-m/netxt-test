@@ -27,7 +27,7 @@ export default function MainNav() {
             <Link href='/' className="mx-5">Home</Link>
             <Link href='/products' className="mx-5">All products</Link>
             <Link href='/products/phone' className="mx-5">Phone</Link>
-            <Link href='/products/tablets' className="mx-5">Tablet</Link>
+            <Link href='/products/tablet' className="mx-5">Tablet</Link>
             <Link href='/products/tv' className="mx-5">TV</Link>
             <Link href='/products/accessories' className="mx-5">Accessories</Link>
             <Link href='/about' className="mx-5">About</Link>
