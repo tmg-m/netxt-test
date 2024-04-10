@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Card from "@/app/Components/Card";
 
 export default function ConfirmationId() {
-  const { checkoutPurchaseOrder, updateProductCart, productCart } = globalStore((state) => state);
+  const { checkoutPurchaseOrder, updateProductCart, singleProductCheckout } = globalStore((state) => state);
   const [orders, setOrders] = useState(null);
   const [userData, setUserData] = useState(null);
   const [purchases, setPurchases] = useState(null);
@@ -15,9 +15,11 @@ export default function ConfirmationId() {
       setOrders(checkoutPurchaseOrder[0]);
       setUserData(checkoutPurchaseOrder[0].userData); 
       setPurchases(checkoutPurchaseOrder[0].products);
-      updateProductCart(null)
+      if(singleProductCheckout.length <= 0) {
+        updateProductCart(null)
+      }
     }
-  }, [checkoutPurchaseOrder, updateProductCart]);
+  }, [checkoutPurchaseOrder, updateProductCart, singleProductCheckout]);
 
   return (
     <div className="flex justify-center items-center mt-20">
