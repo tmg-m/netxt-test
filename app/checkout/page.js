@@ -42,7 +42,7 @@ export default function Checkout() {
     const { name, value, type, checked } = e.target;
     let filteredValue = value;
     if (name === "phone" || name === "postalCode") {
-      filteredValue = value.replace(/\D/g, ""); // Remove any non-numeric characters
+      filteredValue = value.replace(/\D/g, "");
     }
     setFormData((prevData) => ({
       ...prevData,
@@ -64,7 +64,7 @@ export default function Checkout() {
 
   const handleConfirmation = async (e) => {
     if (isFormValid) {
-      const orderNumber = Math.floor(
+      const orderNumber = 'ORD' + Math.floor(
         10000000 + Math.random() * 90000000
       ).toString();
 

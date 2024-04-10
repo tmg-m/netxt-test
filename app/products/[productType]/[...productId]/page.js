@@ -17,7 +17,7 @@ export default function ProductId({ params }) {
     const getData = async () => {
       try {
         const data = await getProductById({ productType, productId });
-        setProduct(data);
+        setProduct(data[0]);
         setIsLoaded(true);
       } catch (error) {
         console.error("Error fetching product:", error);
@@ -48,7 +48,7 @@ export default function ProductId({ params }) {
   };
 
   return (
-    isLoaded && (
+    isLoaded && product && (
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col md:flex-row bg-ribbon w-full justify-center p-10 md:p-20 gap-10 md:gap-20">
           <GalleryProduct galleryImg={product.image_url} />
