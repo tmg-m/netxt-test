@@ -1,7 +1,7 @@
-"use client";
-import { globalStore } from "@/app/store/store";
-import Link from "next/link";
-import { useState, useEffect } from "react";
+"use client"
+import { globalStore } from "@/app/store/store"
+import Link from "next/link"
+import { useState, useEffect } from "react"
 
 export default function CtaBtn({
   id,
@@ -9,44 +9,57 @@ export default function CtaBtn({
   typeBtn,
   isEnable,
   confirmation,
-  selectedProductwithStorage
+  selectedProductwithStorage,
+  summeryCheckout,
 }) {
-  const updateSingleProductCheckout = globalStore(
-    (state) => state.updateSingleProductCheckout
-  );
-  const [url, setUrl] = useState("");
+  const { updateSingleProductCheckout, updateProductCart, updateAllProductCheckout, updateCheckoutPurchaseOrder } =
+    globalStore((state) => state)
+  const [url, setUrl] = useState("")
+  const [cartStatus, setCartStatus] = useState(false)
 
   useEffect(() => {
-    if (isEnable) {
-      const params = { id, type };
-      const queryString = new URLSearchParams(params).toString();
+    if (isEnable && typeBtn !== "cart") {
+      const params = { id, type }
+      const queryString = new URLSearchParams(params).toString()
 
-      let destinationUrl = "/checkout";
+      let destinationUrl = "/checkout"
       if (confirmation) {
         destinationUrl += "/confirmation";
       } else if (selectedProductwithStorage) {
-        destinationUrl += `?${queryString}`;
+        destinationUrl += `?${queryString}`
       } else {
-        destinationUrl += `?${queryString}`;
+        destinationUrl += `?${queryString}`
       }
 
-      setUrl(destinationUrl);
+      setUrl(destinationUrl)
     }
-  }, [id, type, isEnable, confirmation, selectedProductwithStorage]);
+  }, [id, type, isEnable, confirmation, selectedProductwithStorage, typeBtn])
 
-  const handleClick = () => {
-    if (isEnable && selectedProductwithStorage) {updateSingleProductCheckout(selectedProductwithStorage);}
-  }
+  const handleClick = async () => {
+    if (typeBtn === "cart") {
+      await updateProductCart(selectedProductwithStorage)
+      setCartStatus(true)
+    }
+    if (isEnable && selectedProductwithStorage) {
+      updateCheckoutPurchaseOrder(null)
+      if(summeryCheckout) {
+        await updateSingleProductCheckout(null)
+        await updateAllProductCheckout(selectedProductwithStorage);
+      } else {
+        await updateSingleProductCheckout(selectedProductwithStorage);
+      }
+    }
+  };
 
   return (
     <Link
       href={url}
-      className={`flex items-center justify-center px-8 py-3 text-white rounded-3xl cursor-pointer 
+      className={`flex items-center justify-center text-lg font-bold px-8 py-3 text-white rounded-3xl cursor-pointer 
     ${!isEnable ? "bg-red-400" : ""}
     ${typeBtn === "checkout" ? "bg-red-600" : "bg-black"}`}
-    onClick={handleClick}
+      onClick={handleClick}
     >
-      {typeBtn === "checkout" ? "Buy" : "Add to Cart"}
+      {typeBtn === "checkout" ? "Buy" : `${cartStatus? 'Added to Cart' : "Add to Cart"}`}
     </Link>
-  );
+  )
 }
