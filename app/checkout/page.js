@@ -4,17 +4,28 @@ import { globalStore } from "@/app/store/store";
 import CtaBtn from "../Components/Button/CtaBtn";
 
 export default function Checkout() {
-  const { singleProductCheckout, updatePurchaseOrders, allProductCheckout } =
-    globalStore((state) => state);
-  const [products, setproducts] = useState(
-    singleProductCheckout.length > 0 ?  singleProductCheckout : allProductCheckout
-  );
+  const {
+    singleProductCheckout,
+    updatePurchaseOrders,
+    allProductCheckout,
+    updateCheckoutPurchaseOrder,
+  } = globalStore((state) => state);
+  const [products, setproducts] = useState(null);
+
+  useEffect(() => {
+    setproducts(
+      singleProductCheckout.length > 0
+        ? singleProductCheckout
+        : allProductCheckout
+    );
+  }, [singleProductCheckout, allProductCheckout]);
+
   const [isFormValid, setIsFormValid] = useState(false);
 
-  const prices = products.map((product) =>
+  const prices = products?.map((product) =>
     parseFloat(product.storage_options[0].price)
   );
-  const totalPrice = prices.reduce((acc, price) => acc + price, 0);
+  const totalPrice = prices?.reduce((acc, price) => acc + price, 0);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -53,10 +64,19 @@ export default function Checkout() {
 
   const handleConfirmation = async (e) => {
     if (isFormValid) {
-      updatePurchaseOrders({
-        orderNumber: Math.floor(10000000 + Math.random() * 90000000).toString(),
+      const orderNumber = Math.floor(
+        10000000 + Math.random() * 90000000
+      ).toString();
+
+      await updateCheckoutPurchaseOrder({
+        orderNumber,
         userData: formData,
-        products: products,
+        products,
+      });
+      await updatePurchaseOrders({
+        orderNumber,
+        userData: formData,
+        products,
       });
     }
   };
