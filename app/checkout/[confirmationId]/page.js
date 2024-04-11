@@ -2,6 +2,7 @@
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { globalStore } from "@/app/store/store";
 import { useEffect, useState } from "react";
+import Link from "next/link"
 import Card from "@/app/Components/Card";
 
 export default function ConfirmationId() {
@@ -30,7 +31,8 @@ export default function ConfirmationId() {
         <p className="text-lg">
           Your shipping order number is : {orders?.orderNumber}
         </p>
-        <p className="text-md">You can now check your purchases in my shipping.</p>
+        <p className="text-md">You can now check your purchases in my orders.</p>
+        <Link href="/orders" className="px-10 py-2 border-4 rounded-md">My orders</Link>
 
         <div className="flex flex-col justify-center items-center w-full bg-ribbon gap-5 p-10 md:p-20 mt-5 md:mt-10">
           <p className="text-2xl mb-5">Your have purchased</p>
