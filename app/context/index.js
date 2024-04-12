@@ -14,6 +14,11 @@ export function AppWrapper({ children }) {
       console.error("Error fetching product:", error);
     }
   };
+
+  const getProduct = async () => {
+    const url = `/api/products`;
+    return await fetchProductData(url);
+  };
   
   const getProductById = async ({ productType, productId }) => {
     const url = `/api/products/${productType}/${productId}`;
@@ -26,7 +31,7 @@ export function AppWrapper({ children }) {
   };
 
   return (
-    <AppContext.Provider value={{ getProductById, getProductByType }}>
+    <AppContext.Provider value={{ getProductById, getProductByType, getProduct }}>
       {children}
     </AppContext.Provider>
   );
