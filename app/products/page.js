@@ -29,17 +29,18 @@ export default function Product() {
   }, [getProduct]);
 
   return (
-    <div className="flex flex-col">
-      <div>filters functionality</div>
-      <div className="felx flex-col bg-ribbon p-2 md:px-60">
+    <div className="flex flex-col items-center justify-center bg-ribbon px-5 py-10">
         {Object.keys(productType).map((type) => (
-          <div key={type} className="px-5 py-5 md:py-10">
-            <p className="border-b-2 text-lg font-medium mb-8 md:mb-10 pb-1">
+          <div key={type} >
+            <p className="border-b-2 text-lg font-medium mb-8 md:mb-10 w-full">
               {type}
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 justify-center items-center mt-5">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 justify-center items-center mb-10">
               {productType[type]?.map((card) => (
-                <div key={card.id}>
+                <div
+                  key={card.id}
+                  className="flex justify-center items-center mb-10 max-w-[300px]"
+                >
                   <Card
                     key={card.id}
                     id={card.id}
@@ -54,7 +55,6 @@ export default function Product() {
             </div>
           </div>
         ))}
-      </div>
     </div>
   );
 }

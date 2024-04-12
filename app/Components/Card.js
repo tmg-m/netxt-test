@@ -46,7 +46,7 @@ export default function Card({ title, imageUrl, id, type, showAddToCart }) {
         <>
           <div
             onClick={handleClick}
-            className="absolute top-2 md:top-4 right-2 md:right-4 rounded-full border p-1 md:p-2 flex items-center justify-center shadow-2xl bg-white"
+            className="absolute top-2 md:top-4 right-2 md:right-4 rounded-full border p-1 md:p-2 flex items-center justify-center shadow-2xl bg-white cursor-pointer"
           >
             {!isInCart ? (
               <ShoppingBagOutlinedIcon className="text-gray-500" />
