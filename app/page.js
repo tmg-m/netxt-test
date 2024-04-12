@@ -14,7 +14,7 @@ export default function Home() {
       <div className="flex items-center justify-start md:justify-center gap-4 overflow-scroll md:overflow-hidden bg-ribbon p-5">
         {hotToday?.map((phone) => (
           <div key={phone.id} className="flex justify-center items-start">
-            <div className="w-[250px]">
+            <div className="w-[200px] md:w-[250px]">
               <Card
                 key={phone.id}
                 id={phone.id}
@@ -56,12 +56,7 @@ export default function Home() {
       <div className="flex justify-center items-center pb-10 md:py-20 bg-ribbon">
         <div className="grid grid-cols-2 gap-10 px-5 md:w-[40%]">
           {mixDataCard.map((src, index) => (
-            <div
-              key={index}
-              className="flex justify-center items-center cursor-pointer"
-            >
-              <Card imageUrl={src.image_url.main} id={src.id} type={src.type} showAddToCart />
-            </div>
+              <Card key={index} imageUrl={src.image_url.main} id={src.id} type={src.type} showAddToCart />
           ))}
         </div>
       </div>

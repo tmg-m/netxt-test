@@ -41,7 +41,7 @@ export default function Card({ title, imageUrl, id, type, showAddToCart }) {
     }
   };
   return (
-    <div className="relative">
+    <div className="relative  max-w-[300px]">
       {showAddToCart && (
         <>
           <div

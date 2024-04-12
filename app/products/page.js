@@ -30,31 +30,26 @@ export default function Product() {
 
   return (
     <div className="flex flex-col items-center justify-center bg-ribbon px-5 py-10">
-        {Object.keys(productType).map((type) => (
-          <div key={type} >
-            <p className="border-b-2 text-lg font-medium mb-8 md:mb-10 w-full">
-              {type}
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 justify-center items-center mb-10">
-              {productType[type]?.map((card) => (
-                <div
-                  key={card.id}
-                  className="flex justify-center items-center mb-10 max-w-[300px]"
-                >
-                  <Card
-                    key={card.id}
-                    id={card.id}
-                    type={card.type}
-                    imageUrl={`/iphone15test.png`}
-                    title={card.title}
-                    description={card.description}
-                    showAddToCart
-                  />
-                </div>
-              ))}
-            </div>
+      {Object.keys(productType).map((type) => (
+        <div key={type}>
+          <p className="border-b-2 text-lg font-medium mb-8 md:mb-10 w-full">
+            {type}
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 justify-center items-center mb-10">
+            {productType[type]?.map((card) => (
+              <Card
+                key={card.id}
+                id={card.id}
+                type={card.type}
+                imageUrl={`/iphone15test.png`}
+                title={card.title}
+                description={card.description}
+                showAddToCart
+              />
+            ))}
           </div>
-        ))}
+        </div>
+      ))}
     </div>
   );
 }
