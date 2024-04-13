@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Card from "../Components/Card";
 import { useAppContext } from "@/app/context/index";
+import Filter from "../Components/Filter/Filter";
 
 export default function Product() {
   const { getProduct } = useAppContext();
@@ -30,6 +31,7 @@ export default function Product() {
 
   return (
     <div className="flex flex-col items-center justify-center bg-ribbon px-5 py-10">
+      <Filter data={allProducts} />
       {Object.keys(productType).map((type) => (
         <div key={type}>
           <p className="border-b-2 text-lg font-medium mb-8 md:mb-10 w-full">
