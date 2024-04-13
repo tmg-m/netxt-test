@@ -28,13 +28,13 @@ export default function Checkout() {
   const totalPrice = prices?.reduce((acc, price) => acc + price, 0);
 
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    address: "",
-    postalCode: "",
-    country: "",
-    email: "",
-    phone: "",
+    firstName: "John",
+    lastName: "Doe",
+    address: "767 5th Ave, NY",
+    postalCode: "10153",
+    country: "US",
+    email: "mydemoshopping.com",
+    phone: "+00 1234567890",
     agreeTerms: false,
   });
 
@@ -120,7 +120,7 @@ export default function Checkout() {
             <p>Postal Code</p>
             <input
               className="border rounded-md p-2"
-              type="text"
+              type="tel"
               name="postalCode"
               placeholder="00000"
               value={formData.postalCode}
