@@ -31,7 +31,7 @@ export default function Product() {
 
   return (
     <div className="flex flex-col items-center justify-center bg-ribbon px-5 py-10">
-      <Filter data={allProducts} />
+      <Filter productTypes={productType && productType} />
       {Object.keys(productType).map((type) => (
         <div key={type}>
           <p className="border-b-2 text-lg font-medium mb-8 md:mb-10 w-full">
