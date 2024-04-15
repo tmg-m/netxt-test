@@ -44,7 +44,7 @@ export default function ProductType({ params }) {
             <Card
               key={card.id}
               id={card.id}
-              imageUrl="/iphone15test.png"
+              imageUrl={card.image_url.main}
               title={card.title}
               type={card.type}
               description={card.description}

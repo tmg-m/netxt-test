@@ -53,7 +53,7 @@ export default function Product() {
                     key={card.id}
                     id={card.id}
                     type={card.type}
-                    imageUrl={`/iphone15test.png`}
+                    imageUrl={card.image_url.main}
                     title={card.title}
                     description={card.description}
                     showAddToCart

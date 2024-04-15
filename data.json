@@ -9,10 +9,10 @@
         "currency": "$",
         "description": "The iPhone 15 Pro Max is the latest flagship smartphone from Apple, featuring a stunning 6.9-inch Super Retina XDR display, powerful A17 Bionic chip, and advanced triple-camera system with enhanced Night mode. With 5G capability, Face ID, and iOS 20, it offers unparalleled performance, security, and innovation.",
         "image_url": {
-          "main": "https://example.com/iphone15promax.jpg",
+          "main": "/apple15proGold.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/apple15proGold1.png",
+            "secondary": "/apple15proGold2.png"
           }
         },
         "storage_options": [
@@ -30,10 +30,10 @@
         "currency": "$",
         "description": "The iPhone 15 Pro is the latest flagship smartphone from Apple, featuring a stunning 6.9-inch Super Retina XDR display, powerful A17 Bionic chip, and advanced triple-camera system with enhanced Night mode. With 5G capability, Face ID, and iOS 20, it offers unparalleled performance, security, and innovation.",
         "image_url": {
-          "main": "https://example.com/iphone15promax.jpg",
+          "main": "/apple15proBlue.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/apple15proBlue1.png",
+            "secondary": "/apple15proBlue2.png"
           }
         },
         "storage_options": [
@@ -51,10 +51,10 @@
         "currency": "$",
         "description": "The iPhone 15 is the latest flagship smartphone from Apple, featuring a stunning 6.7-inch Super Retina XDR display, powerful A17 Bionic chip, and advanced dual-camera system. With 5G capability, Face ID, and iOS 20, it offers exceptional performance, security, and innovation.",
         "image_url": {
-          "main": "https://example.com/iphone15.jpg",
+          "main": "/apple15green.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/apple15green1.png",
+            "secondary": "/apple15green2.png"
           }
         },
         "storage_options": [
@@ -72,10 +72,10 @@
         "currency": "$",
         "description": "The iPhone 15 is the latest flagship smartphone from Apple, featuring a stunning 6.7-inch Super Retina XDR display, powerful A17 Bionic chip, and advanced dual-camera system. With 5G capability, Face ID, and iOS 20, it offers exceptional performance, security, and innovation.",
         "image_url": {
-          "main": "https://example.com/iphone15.jpg",
+          "main": "/apple15pink.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/apple15pink1.png",
+            "secondary": "/apple15pink2.png"
           }
         },
         "storage_options": [
@@ -93,10 +93,10 @@
         "currency": "$",
         "description": "The iPhone 15 is the latest flagship smartphone from Apple, featuring a stunning 6.7-inch Super Retina XDR display, powerful A17 Bionic chip, and advanced dual-camera system. With 5G capability, Face ID, and iOS 20, it offers exceptional performance, security, and innovation.",
         "image_url": {
-          "main": "https://example.com/iphone15.jpg",
+          "main": "/apple15yellow.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/apple15yellow1.png",
+            "secondary": "/apple15yellow2.png"
           }
         },
         "storage_options": [
@@ -114,10 +114,10 @@
         "currency": "$",
         "description": "The Samsung Galaxy S24 is the latest flagship smartphone from Samsung, featuring a stunning 6.8-inch Dynamic AMOLED display, powerful Exynos 8 Gen 3 chip, and advanced quad-camera system. With 5G capability, ultrasonic fingerprint sensor, and One UI 7, it offers exceptional performance, security, and user experience.",
         "image_url": {
-          "main": "https://example.com/samsunggalaxys24.jpg",
+          "main": "/samsungS24green.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/samsungS24green1.png",
+            "secondary": "/samsungS24green2.png"
           }
         },
         "storage_options": [
@@ -135,10 +135,10 @@
         "currency": "$",
         "description": "The Samsung Galaxy S24 is the latest flagship smartphone from Samsung, featuring a stunning 6.8-inch Dynamic AMOLED display, powerful Exynos 8 Gen 3 chip, and advanced quad-camera system. With 5G capability, ultrasonic fingerprint sensor, and One UI 7, it offers exceptional performance, security, and user experience.",
         "image_url": {
-          "main": "https://example.com/samsunggalaxys24.jpg",
+          "main": "/samsungS24grey.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/samsungS24grey1.png",
+            "secondary": "/samsungS24grey2.png"
           }
         },
         "storage_options": [
@@ -156,10 +156,10 @@
         "currency": "$",
         "description": "The Samsung Galaxy S24 is the latest flagship smartphone from Samsung, featuring a stunning 6.8-inch Dynamic AMOLED display, powerful Exynos 8 Gen 3 chip, and advanced quad-camera system. With 5G capability, ultrasonic fingerprint sensor, and One UI 7, it offers exceptional performance, security, and user experience.",
         "image_url": {
-          "main": "https://fastly.picsum.photos/id/390/400/400.jpg?hmac=s-rwhoxi63mADw9Y1Zrnf5JzZeBPd9wRA9WsDIGcWaw",
+          "main": "/samsungS24yellow.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/samsungS24yellow1.png",
+            "secondary": "/samsungS24yellow2.png"
           }
         },
         "storage_options": [
@@ -177,10 +177,10 @@
         "currency": "$",
         "description": "The iPad Pro 11th Generation is the latest tablet from Apple, featuring a stunning Liquid Retina XDR display, powerful M2 chip, and support for Apple Pencil (3rd generation) and Magic Keyboard. With iPadOS 19, it offers desktop-class performance, advanced multitasking, and 5G connectivity.",
         "image_url": {
-          "main": "https://example.com/ipadpro11thgen.jpg",
+          "main": "/ipadpro11genblue.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/ipadpro11genblue1.png",
+            "secondary": "/ipadpro11genblue2.png"
           }
         },
         "storage_options": [
@@ -199,10 +199,10 @@
         "currency": "$",
         "description": "The iPad Pro 11th Generation is the latest tablet from Apple, featuring a stunning Liquid Retina XDR display, powerful M2 chip, and support for Apple Pencil (3rd generation) and Magic Keyboard. With iPadOS 19, it offers desktop-class performance, advanced multitasking, and 5G connectivity.",
         "image_url": {
-          "main": "https://example.com/ipadpro11thgen.jpg",
+          "main": "/ipadpro11genred.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/ipadpro11genred1.png",
+            "secondary": "/ipadpro11genred2.png"
           }
         },
         "storage_options": [
@@ -221,10 +221,10 @@
         "currency": "$",
         "description": "The iPad 10th Generation is the latest tablet from Apple, featuring a stunning 10.2-inch Retina display, powerful A14 Bionic chip, and support for Apple Pencil (1st generation) and Smart Keyboard. With iPadOS 18, it offers enhanced multitasking, productivity, and creativity.",
         "image_url": {
-          "main": "https://example.com/ipad10thgen.jpg",
+          "main": "/ipad10red.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/ipad10red1.png",
+            "secondary": "/ipad10red2.png"
           }
         },
         "storage_options": [
@@ -241,10 +241,10 @@
         "currency": "$",
         "description": "The Samsung Galaxy Tab S9 is the latest flagship tablet from Samsung, featuring a stunning 11-inch Super AMOLED display, powerful Snapdragon 8 Gen 3 chip, and support for S Pen (included) and Book Cover Keyboard. With Samsung DeX, it offers desktop-like productivity and entertainment experiences.",
         "image_url": {
-          "main": "https://fastly.picsum.photos/id/534/400/400.jpg?hmac=q5ag31CPt_mcalYny_y_K_pLToHBJ1UW8aOF0UgeGhA",
+          "main": "/samsungTabS9.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/samsungTabS91.png",
+            "secondary": "/samsungTabS92.png"
           }
         },
         "storage_options": [
@@ -262,10 +262,10 @@
         "currency": "$",
         "description": "The Samsung QN90A 4K Neo QLED TV delivers stunning picture quality with Quantum Matrix Technology Pro and Neo Quantum Processor 8K. With Object Tracking Sound+ and Samsung Health, it offers an immersive viewing experience and smart features.",
         "image_url": {
-          "main": "https://example.com/samsungqn90a.jpg",
+          "main": "/tvsamsungNeo.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/tvsamsungNeo1.png",
+            "secondary": "/tvsamsungNeo2.png"
           }
         },
         "storage_options": [
@@ -283,10 +283,10 @@
         "currency": "$",
         "description": "The Apple AirPods Pro 2 are the latest wireless earbuds from Apple, featuring active noise cancellation, transparency mode, and spatial audio. With Adaptive EQ and customizable fit, they offer immersive sound and comfort for all-day use.",
         "image_url": {
-          "main": "https://fastly.picsum.photos/id/562/400/400.jpg?hmac=lG-mAqOwH3UNyfJ2kBOUvagmSmYVnOTaE-34dAiSs2s",
+          "main": "/appleAirpodsPro.png",
           "sub": {
-            "primary": "https://fastly.picsum.photos/id/534/400/400.jpg?hmac=q5ag31CPt_mcalYny_y_K_pLToHBJ1UW8aOF0UgeGhA",
-            "secondary": "https://fastly.picsum.photos/id/390/400/400.jpg?hmac=s-rwhoxi63mADw9Y1Zrnf5JzZeBPd9wRA9WsDIGcWaw"
+            "primary": "/appleAirpodsPro1.png",
+            "secondary": "/appleAirpodsPro2.png"
           }
         },
         "storage_options": [
@@ -302,10 +302,10 @@
         "currency": "$",
         "description": "The Samsung Galaxy Buds Pro are the latest true wireless earbuds from Samsung, featuring active noise cancellation, immersive sound, and customizable fit. With Intelligent ANC and IPX7 water resistance, they offer a premium audio experience for all-day use.",
         "image_url": {
-          "main": "https://fastly.picsum.photos/id/867/400/400.jpg?hmac=vrsGmlkoOUp9pYCgTMjkan0PtXeCUBmL3TR8m4gdsZ8",
+          "main": "/samsungBudsPro.png",
           "sub": {
-            "1": "https://example.com/demo_sub_1.jpg",
-            "2": "https://example.com/demo_sub_2.jpg"
+            "primary": "/samsungBudsPro1.png",
+            "secondary": "/samsungBudsPro2.png"
           }
         },
         "storage_options": [

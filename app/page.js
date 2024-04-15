@@ -19,7 +19,7 @@ export default function Home() {
                 key={phone.id}
                 id={phone.id}
                 type={phone.type}
-                imageUrl={"/iphone15test.png"}
+                imageUrl={phone.image_url.main}
                 title={phone.title}
                 description={phone.description}
                 showAddToCart
@@ -54,7 +54,7 @@ export default function Home() {
       <GallerySlides />
 
       <div className="flex justify-center items-center pb-10 md:py-20 bg-ribbon">
-        <div className="grid grid-cols-2 gap-10 px-5 md:w-[40%]">
+        <div className="grid grid-cols-2 gap-5 md:gap-10 px-5">
           {mixDataCard.map((src, index) => (
               <Card key={index} imageUrl={src.image_url.main} id={src.id} type={src.type} showAddToCart />
           ))}
@@ -63,7 +63,7 @@ export default function Home() {
 
       <div className="w-full md:max-h-[800px] flex justify-center items-center p-5 md:p-20">
         <Image
-          src="/samsungtv.png"
+          src="/tvsamsungtv.png"
           className=" object-cover w-100"
           alt="ipadsm1"
           height={1000}

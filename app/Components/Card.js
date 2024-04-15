@@ -21,7 +21,6 @@ export default function Card({ title, imageUrl, id, type, showAddToCart }) {
   }, [productCart, id, type]);
 
   const handleClick = async () => {
-    const typeAndId = { productType: type, productId: id };
     if (isInCart) {
       setIsInCart(false);
       const products = [...productCart.filter((product) => product.id !== id)];
@@ -67,7 +66,7 @@ export default function Card({ title, imageUrl, id, type, showAddToCart }) {
           <Image
             className="w-full h-full object-contain"
             src={imageUrl}
-            alt="iphone 15 pro max"
+            alt={imageUrl}
             height={1000}
             width={1000}
           />
