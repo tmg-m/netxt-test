@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import TuneIcon from "@mui/icons-material/Tune";
 
 export default function Filter({ productTypes, onFilteredProducts }) {
   const [products, setProducts] = useState([]);
@@ -65,21 +66,30 @@ export default function Filter({ productTypes, onFilteredProducts }) {
   };
 
   useEffect(() => {
-  const nonEmptyFilteredProducts = Object.fromEntries(
-    Object.entries(filteredProducts).filter(([type, products]) => products.length > 0)
-  );
-  const hasChanged = JSON.stringify(nonEmptyFilteredProducts) !== JSON.stringify(lastFilteredProducts.current);
-  if (hasChanged) {
-    const filteredData = Object.keys(nonEmptyFilteredProducts).length > 0 ? nonEmptyFilteredProducts : false;
-    onFilteredProducts(filteredData);
-    lastFilteredProducts.current = filteredData;
-  }
-}, [filteredProducts, onFilteredProducts]);
-
+    const nonEmptyFilteredProducts = Object.fromEntries(
+      Object.entries(filteredProducts).filter(
+        ([type, products]) => products.length > 0
+      )
+    );
+    const hasChanged =
+      JSON.stringify(nonEmptyFilteredProducts) !==
+      JSON.stringify(lastFilteredProducts.current);
+    if (hasChanged) {
+      const filteredData =
+        Object.keys(nonEmptyFilteredProducts).length > 0
+          ? nonEmptyFilteredProducts
+          : false;
+      onFilteredProducts(filteredData);
+      lastFilteredProducts.current = filteredData;
+    }
+  }, [filteredProducts, onFilteredProducts]);
 
   return (
-    <div className="flex flex-col items-start gap-8">
-      <p className="text-2xl">Filter</p>
+    <div className="flex flex-col items-start w-[280px] gap-3">
+      <div className="flex gap-4 border-b-2 w-full items-center">
+        <TuneIcon />
+        <p className="text-xl">Filters</p>
+      </div>
       {products &&
         Object.keys(products).map((type) => {
           const uniqueProviders = {};
@@ -87,8 +97,11 @@ export default function Filter({ productTypes, onFilteredProducts }) {
             uniqueProviders[product.provider] = product;
           });
           return (
-            <div key={type} className="flex flex-col gap-2">
-              <div className="flex gap-2">
+            <div
+              key={type}
+              className="flex flex-col gap-2 border w-full py-5 px-3 bg-white rounded-lg"
+            >
+              <div className="flex gap-2 p-2 items-center">
                 <input
                   type="checkbox"
                   name={type}
@@ -101,7 +114,7 @@ export default function Filter({ productTypes, onFilteredProducts }) {
               </div>
               <div className="flex flex-col gap-2 ml-5">
                 {Object.keys(uniqueProviders).map((provider) => (
-                  <div key={provider} className="flex gap-2">
+                  <div key={provider} className="flex gap-2 items-center">
                     <input
                       type="checkbox"
                       name={type}
