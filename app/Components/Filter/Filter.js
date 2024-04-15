@@ -86,7 +86,7 @@ export default function Filter({ productTypes, onFilteredProducts }) {
 
   return (
     <div className="flex flex-col items-start w-[280px] gap-3">
-      <div className="flex gap-4 border-b-2 w-full items-center">
+      <div className="flex gap-4 border-b-2 w-full items-center mb-6">
         <TuneIcon />
         <p className="text-xl">Filters</p>
       </div>
@@ -99,7 +99,7 @@ export default function Filter({ productTypes, onFilteredProducts }) {
           return (
             <div
               key={type}
-              className="flex flex-col gap-2 border w-full py-5 px-3 bg-white rounded-lg"
+              className="flex flex-col gap-2 border w-full py-5 px-3 bg-white rounded-lg mt-1 shadow-lg"
             >
               <div className="flex gap-2 p-2 items-center">
                 <input

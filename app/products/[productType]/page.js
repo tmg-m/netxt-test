@@ -35,7 +35,7 @@ export default function ProductType({ params }) {
           onFilteredProducts={handleFilteredProducts}
         />
       </div>
-      <div className="flex flex-col gap-4 justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
         <p className="border-b-2 text-lg font-medium mb-8 md:mb-10 w-full">
           {productType}
         </p>
