@@ -32,7 +32,7 @@ export default function Product() {
     setHasFilters(filteredProducts);
   };
 
-  return (
+  return productType && (
     <div className="flex items-start justify-center bg-ribbon px-5 py-10 gap-10">
       <div className="hidden md:block">
         <Filter

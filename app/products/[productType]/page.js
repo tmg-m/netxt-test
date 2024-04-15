@@ -27,7 +27,7 @@ export default function ProductType({ params }) {
     setHasFilters(filteredProducts);
   };
 
-  return (
+  return products && (
     <div className="flex justify-center bg-ribbon py-10 gap-10 px-5">
       <div className="hidden md:block">
         <Filter
@@ -40,7 +40,7 @@ export default function ProductType({ params }) {
           {productType}
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10 justify-center items-center">
-          {products && (hasFilters ? hasFilters[productType] : products[productType]).map((card) => (
+          {(hasFilters ? hasFilters[productType] : products[productType]).map((card) => (
             <Card
               key={card.id}
               id={card.id}
