@@ -27,9 +27,6 @@ export default function ProductType({ params }) {
     setHasFilters(filteredProducts);
   };
 
-  console.log(hasFilters)
-  console.log(products)
-
   return (
     <div className="flex justify-center bg-ribbon py-10 gap-10 px-5">
       <div className="hidden md:block">
