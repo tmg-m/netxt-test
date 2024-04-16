@@ -48,6 +48,8 @@ export default function ProductType({ params }) {
               title={card.title}
               type={card.type}
               description={card.description}
+              price={card.storage_options[0].price}
+              color={card.color}
               showAddToCart
             />
           ))}

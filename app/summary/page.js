@@ -53,10 +53,10 @@ export default function ConfirmationId() {
                 className="flex flex-col md:flex-row justify-between gap-10 items-end md:items-center pb-5 md:pb-10 border-b-2"
               >
                 <div className="flex flex-col md:flex-row justify-between items-center gap-10 w-full md:w-100">
-                  <div className="md:max-w-[200px] md:max-h-[300px]">
+                  <div className="md:max-w-[200px] md:max-h-[300px] p-10 bg-white rounded-3xl shadow-2xl">
                     <Image
                       src={product.image_url.main}
-                      className="object-contain bg-white rounded-3xl shadow-2xl w-full h-full"
+                      className="object-contain bg-white w-full h-full"
                       alt={`image-${product.id}`}
                       height={400}
                       width={400}

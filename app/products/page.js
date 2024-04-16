@@ -56,6 +56,8 @@ export default function Product() {
                     imageUrl={card.image_url.main}
                     title={card.title}
                     description={card.description}
+                    price={card.storage_options[0].price}
+                    color={card.color}
                     showAddToCart
                   />
                 )
