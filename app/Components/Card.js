@@ -84,10 +84,10 @@ export default function Card({
           <>
             <div className="flex flex-col justify-center items-center gap-4 py-3 md:py-5 w-full border-t md:px-5 text-center">
               <div className="flex flex-col gap-2 justify-center items-center">
-                <p className="text-xl font-medium">{title}</p>
+                <p className="text-md">{title}</p>
                 {color && <p className="text-sm">Color: {color}</p>}
               </div>
-              {price && <p className="text-lg font-medium">${price}</p>}
+              {price && <p className="text-md">${price}</p>}
             </div>
           </>
         )}
