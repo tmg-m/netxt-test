@@ -4,11 +4,13 @@ import Image from "next/image";
 import GallerySlides from "./Components/Gallery/GallerySlides";
 import HeroSlider from "./Components/Hero/HeroSlider";
 import { globalStore } from "@/app/store/store"
+import Banner from "./Components/Banner";
 
 export default function Home() {
   const { hotToday, mixDataCard } = globalStore((state) => state)
   return (
     <div className="flex flex-col w-full">
+      <Banner />
       <HeroSlider />
 
       <div className="flex items-center justify-start md:justify-center gap-4 overflow-scroll md:overflow-hidden bg-ribbon p-5 h-[450px]">
