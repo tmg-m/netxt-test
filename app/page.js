@@ -11,10 +11,10 @@ export default function Home() {
     <div className="flex flex-col w-full">
       <HeroSlider />
 
-      <div className="flex items-center justify-start md:justify-center gap-4 overflow-scroll md:overflow-hidden bg-ribbon p-5">
+      <div className="flex items-center justify-start md:justify-center gap-4 overflow-scroll md:overflow-hidden bg-ribbon p-5 h-[350px]">
         {hotToday?.map((phone) => (
-          <div key={phone.id} className="flex justify-center items-start">
-            <div className="w-[200px] md:w-[250px]">
+          <div key={phone.id} className="flex justify-center items-start h-full">
+            <div className="w-[200px] md:w-[250px] h-full">
               <Card
                 key={phone.id}
                 id={phone.id}

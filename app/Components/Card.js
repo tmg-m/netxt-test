@@ -40,7 +40,7 @@ export default function Card({ title, imageUrl, id, type, showAddToCart }) {
     }
   };
   return (
-    <div className="relative  max-w-[300px]">
+    <div className="relative max-w-[300px] h-full">
       {showAddToCart && (
         <>
           <div
@@ -60,9 +60,9 @@ export default function Card({ title, imageUrl, id, type, showAddToCart }) {
       )}
       <Link
         href={`/products/${type}/${id}`}
-        className="flex flex-col shadow-2xl rounded-xl bg-white cursor-pointer"
+        className="flex flex-col shadow-2xl rounded-xl bg-white cursor-pointer h-full justify-between"
       >
-        <div className="flex flex-col justify-center items-center overflow-hidden p-5">
+        <div className="flex flex-col justify-center items-center overflow-hidden p-5 h-full">
           <Image
             className="w-full h-full object-contain"
             src={imageUrl}
