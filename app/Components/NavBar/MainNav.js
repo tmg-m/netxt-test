@@ -22,7 +22,7 @@ export default function MainNav() {
       {isMobile ? 
         <MainNavResponsive /> :
         <div className="flex justify-between items-center mx-5 py-5">
-          <Link href='/' className="">Logo</Link>
+          <Link href='/' className="border-2 border-stone-500 px-5 py-1">Next Shop</Link>
           <div className="flex justify-between items-center">
             <Link href='/' className="mx-5">Home</Link>
             <Link href='/products' className="mx-5">All products</Link>
