@@ -82,7 +82,7 @@ export default function Card({
         </div>
         {title && (
           <>
-            <div className="flex flex-col justify-center items-center gap-4 py-3 md:py-5 w-full border-t">
+            <div className="flex flex-col justify-center items-center gap-4 py-3 md:py-5 w-full border-t p-5 text-center">
               <div className="flex flex-col gap-2 justify-center items-center">
                 <p className="text-xl font-medium">{title}</p>
                 {color && <p className="text-sm">Color: {color}</p>}
