@@ -146,7 +146,7 @@
           {"size": "256GB", "price": 1099.99},
           {"size": "512GB", "price": 1299.99}
         ],
-        "color": "grey"
+        "color": "gray"
       },
       {
         "id": "56824",
@@ -211,7 +211,7 @@
           {"size": "512GB", "price": 1299.99},
           {"size": "1TB", "price": 1499.99}
         ],
-        "color": "space grey"
+        "color": "gray"
       },
       {
         "id": "45782",
@@ -252,7 +252,7 @@
           {"size": "256GB", "price": 999.99},
           {"size": "512GB", "price": 1199.99}
         ],
-        "color": "grey"
+        "color": "gray"
       },
       {
         "id": "49275",
