@@ -5,8 +5,17 @@ import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 import Link from "next/link";
 import { globalStore } from "@/app/store/store";
 import { useEffect, useState } from "react";
+import CtaBtn from "./Button/CtaBtn";
 
-export default function Card({ title, imageUrl, id, type, showAddToCart }) {
+export default function Card({
+  title,
+  imageUrl,
+  id,
+  type,
+  showAddToCart,
+  price,
+  color,
+}) {
   const { updateProductCart, productCart, removeProductFromCart, allProducts } =
     globalStore((state) => state);
 
@@ -45,7 +54,7 @@ export default function Card({ title, imageUrl, id, type, showAddToCart }) {
         <>
           <div
             onClick={handleClick}
-            className="absolute top-2 md:top-4 right-2 md:right-4 rounded-full border p-1 md:p-2 flex items-center justify-center shadow-2xl bg-white cursor-pointer"
+            className="absolute top-2 md:top-4 right-2 md:right-4 rounded-full z-10 border p-1 md:p-2 flex items-center justify-center shadow-2xl bg-white cursor-pointer"
           >
             {!isInCart ? (
               <ShoppingBagOutlinedIcon className="text-gray-500" />
@@ -73,8 +82,12 @@ export default function Card({ title, imageUrl, id, type, showAddToCart }) {
         </div>
         {title && (
           <>
-            <div className="flex justify-center items-center py-3 md:py-5 w-full border-t">
-              <p>{title}</p>
+            <div className="flex flex-col justify-center items-center gap-4 py-3 md:py-5 w-full border-t">
+              <div className="flex flex-col gap-2 justify-center items-center">
+                <p>{title}</p>
+                {color && <p>Color: {color}</p>}
+              </div>
+              {price && <p>${price}</p>}
             </div>
           </>
         )}
