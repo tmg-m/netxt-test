@@ -26,7 +26,7 @@ export default function SbMain() {
         Next Shop
       </Link>
       <div>
-        <Link href="/orders" className="mr-5">
+        <Link href="/summary" className="mr-5">
           <ShoppingBagOutlinedIcon />
         </Link>
         <IconButton onClick={handleClick}>
@@ -59,11 +59,6 @@ export default function SbMain() {
           </MenuItem>
           <MenuItem onClick={handleClose}>
             <Link href="/products" className="w-full">
-              Phone
-            </Link>
-          </MenuItem>
-          <MenuItem onClick={handleClose}>
-            <Link href="/products/phone" className="w-full">
               All products
             </Link>
           </MenuItem>
