@@ -13,7 +13,6 @@ export default function Home() {
     <div className="flex flex-col w-full">
       <Banner />
       <HeroSlider />
-
       <div className="flex items-center justify-start md:justify-center gap-4 overflow-scroll md:overflow-hidden bg-ribbon p-5 h-[300px] md:h-[400px]">
         {hotToday?.map((phone) => (
           <div

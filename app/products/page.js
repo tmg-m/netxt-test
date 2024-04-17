@@ -33,8 +33,8 @@ export default function Product() {
   };
 
   return productType && (
-    <div className="flex items-start justify-center bg-ribbon px-5 py-10 gap-10">
-      <div className="hidden md:block">
+    <div className="flex flex-col md:flex-row items-start justify-center bg-ribbon px-5 py-10 gap-5 md:gap-10">
+      <div className="w-full md:w-auto">
         <Filter
           productTypes={productType && productType}
           onFilteredProducts={handleFilteredProducts}

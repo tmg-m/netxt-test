@@ -30,12 +30,21 @@ export default function Orders() {
     );
   };
 
+
   return (
     <div className="flex flex-col justify-center gap-5 mb-10 p-5 md:p-20">
       <p className="text-4xl">My orders</p>
+      {orders?.length <= 0 && (
+        <p className="flex flex-col items-center justify-center bg-ribbon p-20 md:p-40 text-lg font-bold">
+          You have orders right now
+        </p>
+      )}
       {orders &&
         orders.map((order, index) => (
-          <div key={index} className="flex flex-col gap-5 md:gap-10 bg-ribbon p-10">
+          <div
+            key={index}
+            className="flex flex-col gap-5 md:gap-10 bg-ribbon p-10"
+          >
             <p className="font-bold text-lg">
               Order number :{" "}
               <span className="font-normal">{order.orderNumber}</span>
@@ -48,10 +57,10 @@ export default function Orders() {
                     className="flex flex-col md:flex-row justify-between items-center gap-10 pb-5 md:pb-10 border-b-2"
                   >
                     <div className="flex flex-col md:flex-row justify-between items-center gap-10">
-                      <div className="max-w-[150px] md:max-w-[200px] max-h-[200px] md:max-h-[300px]">
+                      <div className="max-w-[150px] md:max-w-[200px] max-h-[200px] md:max-h-[300px] p-5 bg-white rounded-3xl shadow-2xl">
                         <Image
                           src={product.image_url.main}
-                          className="object-contain bg-white rounded-3xl shadow-2xl w-full h-full"
+                          className="object-contain bg-white w-full h-full"
                           alt={`image-${product.id}`}
                           height={400}
                           width={400}
@@ -85,7 +94,7 @@ export default function Orders() {
                   <p className="text-2xl mt-2 border-t-2 text-right px-3">
                     {order.products.length}
                   </p>
-                  <p className="text-2xl mt-2 border-t-2 text-right px-3">
+                  <p className="text-2xl mt-2 border-t-2 text-right px-3 overflow-scroll">
                     ${handlePriceOrders(order?.products)}
                   </p>
                 </div>
